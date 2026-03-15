@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import LessonCard from '@/components/LessonCard';
-import { UNITS } from '@/constants/units';
-import { LESSONS } from '@/constants/lessons';
+import { UNITS, LESSONS } from '@/data';
 import { notFound } from 'next/navigation';
 
 interface UnitDetailPageProps {

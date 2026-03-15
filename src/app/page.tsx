@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import LessonCard from '@/components/LessonCard';
-import { LESSONS } from '@/constants/lessons';
+import { LESSONS } from '@/data';
 
 export default function Home() {
   return (

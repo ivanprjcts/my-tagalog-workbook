@@ -1,6 +1,5 @@
 import UnitCard from '@/components/UnitCard';
-import { UNITS } from '@/constants/units';
-import { LESSONS } from '@/constants/lessons';
+import { UNITS, LESSONS } from '@/data';
 
 export default function UnitsPage() {
   // Calculate lesson count for each unit
