@@ -8,3 +8,5 @@ export { UNITS } from './units';
 export { LESSONS } from './lessons';
 export { VOCABULARY } from './vocabulary';
 export { GRAMMAR_RULES } from './grammar';
+export { VERBS } from './verbs';
+export * from './verbs/utils';

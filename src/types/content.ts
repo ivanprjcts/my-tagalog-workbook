@@ -95,3 +95,25 @@ export interface Flashcard {
   hint?: string;
   audioUrl?: string;
 }
+
+/**
+ * Phoneme for alphabet and pronunciation
+ */
+export interface Phoneme {
+  letter: string;
+  uppercase: string;
+  lowercase: string;
+  pronunciation: string;
+  ipa: string; // International Phonetic Alphabet
+  examples: PronunciationExample[];
+  notes?: string;
+}
+
+/**
+ * Example word demonstrating a phoneme
+ */
+export interface PronunciationExample {
+  word: string;
+  english: string;
+  emphasis?: string; // Which part emphasizes the sound
+}

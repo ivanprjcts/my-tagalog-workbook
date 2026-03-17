@@ -54,6 +54,8 @@ export default async function UnitDetailPage({ params }: UnitDetailPageProps) {
                 title={lesson.title}
                 description={lesson.description}
                 level={lesson.level}
+                unitId={unit.id}
+                lessonId={lesson.id}
               />
             ))}
           </div>
