@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """
-Build the four stress/glottal-stop minimal pairs by hand.
+Build the four stress/glottal-stop minimal pairs with a Spanish voice.
 
-The Edge Filipino voice ignores the written accent in bása/basâ and túbo/tubò,
-so both members of each pair can sound the same. This script synthesizes the
-individual syllables, applies an explicit stress pattern, and adds a short
+The main Filipino TTS voice ignores the written stress marks, and its syllable
+rendering can sound English-influenced. For these four words the important
+contrast is stress plus the final glottal stop, and Spanish vowels/consonants
+are closer to the target sounds. We therefore synthesize the whole word with a
+Spanish voice, using the written accent to place stress, then add a short
 glottal-like cut for the final-stress forms.
 
 Requirements:
@@ -23,8 +25,8 @@ from pathlib import Path
 
 import edge_tts
 
-VOICE = os.environ.get("TAGALOG_TTS_VOICE", "fil-PH-BlessicaNeural")
-RATE = os.environ.get("TAGALOG_TTS_RATE", "-5%")
+VOICE = os.environ.get("TAGALOG_PAIR_VOICE", "es-ES-ElviraNeural")
+RATE = os.environ.get("TAGALOG_PAIR_RATE", "-8%")
 FFMPEG = os.environ.get("FFMPEG", "ffmpeg")
 OUT_DIR = Path("public/audio/custom")
 OVERRIDES_PATH = Path("src/content/audio-overrides.ts")
@@ -61,41 +63,17 @@ def trim_silence(src: Path, dst: Path) -> None:
     )
 
 
-def apply_stress(src: Path, dst: Path, stressed: bool) -> None:
-    # Stressed: longer and louder. Unstressed: shorter and softer.
-    audio_filter = "atempo=0.85,volume=4dB" if stressed else "atempo=1.08,volume=-3dB"
-    run(["-i", str(src), "-af", audio_filter, "-ar", "24000", "-ac", "1", str(dst)])
-
-
-def concat_syllables(first: Path, second: Path, dst: Path, glottal: bool) -> None:
-    filters = (
-        "[0:a]apad=pad_dur=0.02[a0];"
-        "[a0][1:a]concat=n=2:v=0:a=1[out]"
-    )
+def add_glottal_cut(src: Path, dst: Path) -> None:
+    # A short, abrupt cut plus silence approximates a final glottal stop.
     run(
         [
-            "-i", str(first),
-            "-i", str(second),
-            "-filter_complex", filters,
-            "-map", "[out]",
+            "-i", str(src),
+            "-af", "areverse,atrim=start=0.025,areverse,apad=pad_dur=0.06",
             "-ar", "24000",
             "-ac", "1",
             str(dst),
         ]
     )
-    if glottal:
-        # A short, abrupt cut plus silence approximates a final glottal stop.
-        cut = dst.with_suffix(".cut.wav")
-        run(
-            [
-                "-i", str(dst),
-                "-af", "areverse,atrim=start=0.025,areverse,apad=pad_dur=0.06",
-                "-ar", "24000",
-                "-ac", "1",
-                str(cut),
-            ]
-        )
-        cut.replace(dst)
 
 
 def encode(src: Path, dst: Path) -> None:
@@ -111,25 +89,20 @@ def encode(src: Path, dst: Path) -> None:
     )
 
 
-async def build_pair(word: str, first_syllable: str, second_syllable: str, stress: str, filename: str) -> str:
-    first_mp3 = TEMP_DIR / f"{word}-first.mp3"
-    second_mp3 = TEMP_DIR / f"{word}-second.mp3"
-    first_wav = TEMP_DIR / f"{word}-first.wav"
-    second_wav = TEMP_DIR / f"{word}-second.wav"
-    first_stressed = TEMP_DIR / f"{word}-first-stressed.wav"
-    second_stressed = TEMP_DIR / f"{word}-second-stressed.wav"
-    joined = TEMP_DIR / f"{word}-joined.wav"
+async def build_pair(word: str, spoken_text: str, glottal: bool, filename: str) -> str:
+    mp3 = TEMP_DIR / f"{word}.mp3"
+    trimmed = TEMP_DIR / f"{word}-trimmed.wav"
+    shaped = TEMP_DIR / f"{word}-shaped.wav"
     output = OUT_DIR / filename
 
-    await synthesize(first_syllable, first_mp3)
-    await synthesize(second_syllable, second_mp3)
-    trim_silence(first_mp3, first_wav)
-    trim_silence(second_mp3, second_wav)
-    apply_stress(first_wav, first_stressed, stress == "first")
-    apply_stress(second_wav, second_stressed, stress == "second")
-    concat_syllables(first_stressed, second_stressed, joined, glottal=stress == "second")
-    encode(joined, output)
-    print(f"{word}: {output}")
+    await synthesize(spoken_text, mp3)
+    trim_silence(mp3, trimmed)
+    if glottal:
+        add_glottal_cut(trimmed, shaped)
+    else:
+        shaped = trimmed
+    encode(shaped, output)
+    print(f"{word}: {output} (spoken as {spoken_text!r}, voice {VOICE})")
     return f"/audio/custom/{filename}"
 
 
@@ -137,15 +110,15 @@ async def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     pairs = [
-        ("bása", "ba", "sa", "first", "basa-first-stress.mp3"),
-        ("basâ", "ba", "sa", "second", "basa-final-stress.mp3"),
-        ("túbo", "tu", "bo", "first", "tubo-first-stress.mp3"),
-        ("tubò", "tu", "bo", "second", "tubo-final-stress.mp3"),
+        ("bása", "bása", False, "basa-first-stress.mp3"),
+        ("basâ", "basá", True, "basa-final-stress.mp3"),
+        ("túbo", "túbo", False, "tubo-first-stress.mp3"),
+        ("tubò", "tubó", True, "tubo-final-stress.mp3"),
     ]
 
     overrides: dict[str, str] = {}
-    for word, first, second, stress, filename in pairs:
-        overrides[word] = await build_pair(word, first, second, stress, filename)
+    for word, spoken_text, glottal, filename in pairs:
+        overrides[word] = await build_pair(word, spoken_text, glottal, filename)
 
     lines = [
         "// Generated by scripts/generate-minimal-pairs.py. Do not edit by hand.",
