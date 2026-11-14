@@ -10,7 +10,7 @@ The work is tracked in the GitHub epic [#1](https://github.com/ivanprjcts/my-tag
 
 ### Implemented
 
-- **Phase 0 foundation is complete.** Repo hygiene, metadata, README, lint, type-checking, content validation, test harness, CI and the app shell are in place.
+- **Phase 0 implementation is complete.** Repo hygiene, metadata, README, lint, type-checking, content validation, test harness, CI and the app shell are in place. Native-speaker review remains open.
 - **Unit 1 — Sounds & Survival is complete.** Six lessons: sounds and spelling, greetings and politeness, names and introductions, people and pronouns, numbers and money, survival phrases and review.
 - **A real learning loop.** Each lesson has objectives, a can-do statement, vocabulary with audio buttons, grammar patterns, a dialogue with a translation toggle, eight-plus exercises, a lesson check and review cards.
 - **Exercise engine and UI.** Multiple choice, multi-select, matching, fill-in-the-blank, word bank, listening, dictation, categorization, ordering, translation, error correction and conjugation.
@@ -315,7 +315,7 @@ The epic is [#1](https://github.com/ivanprjcts/my-tagalog-workbook/issues/1). Ea
 | [#7](https://github.com/ivanprjcts/my-tagalog-workbook/issues/7) | Rebuild progress persistence with a versioned store |
 | [#8](https://github.com/ivanprjcts/my-tagalog-workbook/issues/8) | Add the test harness and CI quality gates |
 
-**Status:** complete. All seven issues are implemented and verified.
+**Status:** implementation complete. Native-speaker sign-off in #5 remains open.
 
 **Exit criteria:** lint, typecheck, tests and build are green in CI; the A1 blueprint is written; the schema validates the migrated alphabet lesson; progress survives reload; the new shell is used by the home, unit and lesson pages.
 
