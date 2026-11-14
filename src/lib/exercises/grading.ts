@@ -197,8 +197,9 @@ export function emptyAnswer(exercise: Exercise): ExerciseAnswer {
   switch (exercise.type) {
     case 'multi-select':
     case 'word-bank':
-    case 'ordering':
       return [];
+    case 'ordering':
+      return exercise.items;
     case 'matching':
     case 'categorization':
       return {};

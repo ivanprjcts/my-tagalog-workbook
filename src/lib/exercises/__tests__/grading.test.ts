@@ -5,10 +5,11 @@ import type {
   MatchingExercise,
   McqExercise,
   MultiSelectExercise,
+  OrderingExercise,
   TranslationExercise,
   WordBankExercise,
 } from '@/content/schema';
-import { gradeExercise, normalizeAnswer } from '../grading';
+import { emptyAnswer, gradeExercise, isAnswerComplete, normalizeAnswer } from '../grading';
 
 const mcq: McqExercise = {
   id: 'mcq',
@@ -100,6 +101,14 @@ describe('answer normalization', () => {
   });
 });
 
+const ordering: OrderingExercise = {
+  id: 'ordering',
+  type: 'ordering',
+  prompt: 'Put the words in order',
+  items: ['Magandang', 'umaga'],
+  explanation: 'Magandang umaga.',
+};
+
 describe('exercise grading', () => {
   it('grades multiple choice', () => {
     expect(gradeExercise(mcq, 'a').correct).toBe(true);
@@ -120,6 +129,12 @@ describe('exercise grading', () => {
   it('grades a word bank and its alternatives', () => {
     expect(gradeExercise(wordBank, ['Magandang', 'umaga']).correct).toBe(true);
     expect(gradeExercise(wordBank, ['umaga', 'Magandang']).correct).toBe(false);
+  });
+
+  it('starts an ordering exercise in its correct order', () => {
+    expect(emptyAnswer(ordering)).toEqual(['Magandang', 'umaga']);
+    expect(isAnswerComplete(ordering, emptyAnswer(ordering))).toBe(true);
+    expect(gradeExercise(ordering, emptyAnswer(ordering)).correct).toBe(true);
   });
 
   it('gives partial credit for matching', () => {
