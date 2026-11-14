@@ -19,7 +19,7 @@ export const lesson01SoundsAndSpelling: Lesson = {
   estimatedMinutes: 25,
   objectives: [
     'Read the modern Filipino alphabet and the older abakada.',
-    'Pronounce the five Tagalog vowels clearly, using Spanish vowel values as the base and avoiding English long-vowel glides.',
+    'Pronounce the five Tagalog vowels clearly, using the Spanish vowel values as the base.',
     'Recognize the ng sound, stress and the glottal stop in common words.',
   ],
   canDo: [
