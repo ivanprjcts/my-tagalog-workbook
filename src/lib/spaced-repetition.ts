@@ -48,7 +48,7 @@ export function calculateNextReviewDate(
   if (quality < 3) {
     // Restart learning if quality is poor
     interval = 1;
-    masteryLevel = Math.max(0, masteryLevel - 1) as any;
+    masteryLevel = Math.max(0, masteryLevel - 1) as FlashcardProgress['masteryLevel'];
   } else {
     // Increase interval based on spaced repetition
     if (repetitions === 1) {
@@ -58,7 +58,7 @@ export function calculateNextReviewDate(
     } else {
       interval = Math.round(interval * easeFactor);
     }
-    masteryLevel = Math.min(5, masteryLevel + 1) as any;
+    masteryLevel = Math.min(5, masteryLevel + 1) as FlashcardProgress['masteryLevel'];
   }
 
   // Calculate next review date (in milliseconds)

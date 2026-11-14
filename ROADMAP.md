@@ -8,35 +8,43 @@ The work is tracked in the GitHub epic [#1](https://github.com/ivanprjcts/my-tag
 
 ## 1. Where the project stands (November 2026)
 
-### What already works
+### Implemented
 
-- Next.js 16 App Router with React 19, TypeScript and Tailwind 4.
-- Static export configured for GitHub Pages, including `basePath` and unoptimized images.
-- Unit and lesson routing with `generateStaticParams`.
-- An alphabet viewer with 28 phoneme entries and pronunciation rules.
-- A flashcard prototype, an SM-2-style scheduling utility and a progress hook.
-- Prototype verb data for `kain`, `bili` and `sulat`.
-- `npm run build` succeeds and produces 19 static pages. TypeScript passes.
+- **Phase 0 foundation is complete.** Repo hygiene, metadata, README, lint, type-checking, content validation, test harness, CI and the app shell are in place.
+- **Unit 1 — Sounds & Survival is complete.** Six lessons: sounds and spelling, greetings and politeness, names and introductions, people and pronouns, numbers and money, survival phrases and review.
+- **A real learning loop.** Each lesson has objectives, a can-do statement, vocabulary with audio buttons, grammar patterns, a dialogue with a translation toggle, eight-plus exercises, a lesson check and review cards.
+- **Exercise engine and UI.** Multiple choice, multi-select, matching, fill-in-the-blank, word bank, listening, dictation, categorization, ordering, translation, error correction and conjugation.
+- **Progress store v2.** Versioned localStorage, migration from the old prototype key, lesson completion, best scores, time tracking, streak, export/import and reset.
+- **Spaced review.** Four-grade SM-2 variant, new/due queue, session summary, persistence and tests.
+- **Reference page.** Corrected alphabet and pronunciation reference plus the A1 grammar rules.
+- **Quality gates.** Vitest, React Testing Library, Playwright, `content:check`, lint, typecheck, build and GitHub Actions.
+- **Current content totals:** 1 unit, 6 published lessons, 60 exercises, 36 check questions, 109 vocabulary items.
 
-### What is missing or broken
+### Verified locally
 
-- **Only one real lesson exists.** Every lesson URL renders the alphabet lesson. For example, `/units/getting-started/lessons/pronouns` still shows “The Tagalog alphabet is the foundation…”. The lesson page hard-codes the alphabet content.
-- **Content model is too thin.** `Lesson.content` is an optional string; there is no model for sections, dialogues, exercises, answer keys, audio or quizzes.
-- **No exercise engine.** There is no multiple choice, fill-in-the-blank, sentence builder, matching, translation, listening or dictation activity.
-- **No real audio.** `audioUrl` fields exist but nothing plays.
-- **Progress is a prototype.** The lesson “Mark as Complete” button does nothing; `useProgress` is never wired to lessons; Maps are mutated in place; `completeLessor` is misspelled; `Date.now` is called during render; the dashboard is not routed.
-- **Flashcards have state bugs.** Card state is not reset between cards, session stats can be stale, there is no final summary, the load/save effects race and the quality scale is inconsistent.
-- **The grammar model is misleading.** Verb tables append pronouns to verb forms and call them conjugations. Tagalog verbs do not agree with person. Several forms are wrong: `bibili ko` should be `bibilhin`; `sinulat / sinusulat / susulatin` mixes paradigms; `kainan` location/beneficiary tables are not valid paradigms.
-- **Some content is factually wrong.** `ko`, `mo`, `niya` are called oblique pronouns but are ng-form pronouns; the oblique forms are `akin`, `iyo`, `kanya`, etc. Phoneme examples include `corte`, `casa`, `engel`, `jueves`, `oma`, `gura`, `ouro`, which are not Tagalog. “No diphthongs” is false. The 28-letter Filipino alphabet is conflated with the 20-letter abakada.
-- **Navigation and metadata are default Next.js.** The title is “Create Next App”, the home page links “Start Lesson” to `#`, pages duplicate headers, and the dark-mode media query conflicts with light-only components.
-- **Quality gates are missing.** `npm run lint` fails with 13 errors, there are no tests, CI only builds, and the deploy workflow uses `npm install` instead of `npm ci`.
-- **Repository hygiene.** `.idea/` files are staged, the README is create-next-app boilerplate, and the old roadmap was reduced to a single priority.
+- `npm run check` passes: lint, typecheck, 43 unit/component tests and content validation.
+- `npm run test:e2e` passes: lesson practice, lesson check, persistence after reload, review scheduling and 390px overflow.
+- `npm run build` generates 20 static pages, including all six Unit 1 lessons.
+- A Playwright pass through the full Unit 1 lesson check records completion and survives reload.
 
-### Bottom line
+### Remaining
 
-The project has a working shell and a promising prototype, but it is not yet a workbook. The next step is not “add more lessons”; it is to define the A1 scope, fix the content model and the inaccurate data, and build the lesson and exercise engine. Unit 1 should prove that pipeline before Units 2–6 are authored.
+- Units 2–6 and the final A1 exam.
+- Unit-level quizzes with a per-tag breakdown (lesson checks are done).
+- Searchable vocabulary index and phrasebook on the reference page.
+- A dedicated “Tagalog for Spanish speakers” reference page (the per-lesson notes are in place).
+- PWA/offline mode, full accessibility audit and native-speaker sign-off.
+- The final content QA pass.
 
----
+### Fixed from the prototype
+
+The Phase 0 audit corrected or removed the original content errors:
+
+- `ko`, `mo`, `niya` were mislabeled as oblique pronouns. They are now correctly described as ng-form pronouns; the sa-form pronouns are `akin`, `iyo`, `kanya`, `amin`, `atin`, `inyo`, `kanila`.
+- The misleading verb-conjugation tables and grammar viewer were retired. Tagalog verbs do not agree with person, and the old `bibili ko` / `susulatin` / `kainan` paradigms were wrong.
+- The phoneme examples were replaced with verified Tagalog or clearly labeled loanwords. The false “no diphthongs” claim was removed.
+- The modern 28-letter alphabet and the 20-letter abakada are now distinguished.
+- The old flashcard prototype was replaced by the new review store, which fixes the card-state, stale-stats and persistence bugs.
 
 ## 2. Audience and product principles
 
@@ -307,6 +315,8 @@ The epic is [#1](https://github.com/ivanprjcts/my-tagalog-workbook/issues/1). Ea
 | [#7](https://github.com/ivanprjcts/my-tagalog-workbook/issues/7) | Rebuild progress persistence with a versioned store |
 | [#8](https://github.com/ivanprjcts/my-tagalog-workbook/issues/8) | Add the test harness and CI quality gates |
 
+**Status:** complete. All seven issues are implemented and verified.
+
 **Exit criteria:** lint, typecheck, tests and build are green in CI; the A1 blueprint is written; the schema validates the migrated alphabet lesson; progress survives reload; the new shell is used by the home, unit and lesson pages.
 
 ### Phase 1 — Engine & Unit 1
@@ -326,6 +336,8 @@ The epic is [#1](https://github.com/ivanprjcts/my-tagalog-workbook/issues/1). Ea
 | [#17](https://github.com/ivanprjcts/my-tagalog-workbook/issues/17) | Spanish-speaker companion layer |
 | [#18](https://github.com/ivanprjcts/my-tagalog-workbook/issues/18) | Author Unit 1 — Sounds & Survival (6 lessons) |
 
+**Status:** the engine, audio, review, lesson checks and Unit 1 are implemented. Unit quizzes, the searchable reference and the full Spanish reference page remain open. Native-speaker review is still pending.
+
 **Exit criteria:** all six Unit 1 lessons are playable end-to-end; each has audio, exercises, a check and flashcards; the unit quiz scores and unlocks correctly; the dashboard shows real progress; `content:check` passes; a native speaker has reviewed the unit.
 
 ### Phase 2 — Full A1 content
@@ -342,6 +354,8 @@ The epic is [#1](https://github.com/ivanprjcts/my-tagalog-workbook/issues/1). Ea
 | [#24](https://github.com/ivanprjcts/my-tagalog-workbook/issues/24) | A1 final exam and printable certificate |
 | [#25](https://github.com/ivanprjcts/my-tagalog-workbook/issues/25) | Graded reading, listening and mixed review |
 
+**Status:** not started. Unit 1 is the authoring template.
+
 **Exit criteria:** all 36 lessons pass `content:check`; every unit has a quiz; the final exam covers every unit and can-do statement; the mistake bank and mixed practice work; no full focus-system tables appear in A1.
 
 ### Phase 3 — Polish & launch
@@ -354,6 +368,8 @@ The epic is [#1](https://github.com/ivanprjcts/my-tagalog-workbook/issues/1). Ea
 | [#27](https://github.com/ivanprjcts/my-tagalog-workbook/issues/27) | Accessibility, print and mobile polish |
 | [#28](https://github.com/ivanprjcts/my-tagalog-workbook/issues/28) | Launch polish: metadata, SEO, 404, performance |
 | [#29](https://github.com/ivanprjcts/my-tagalog-workbook/issues/29) | Full content QA, authoring guide and launch checklist |
+
+**Status:** not started.
 
 **Exit criteria:** offline works after one visit; zero serious axe violations; keyboard-only lesson completion; printed worksheet and certificate are legible; Lighthouse targets met; a new author can add a lesson from the guide; launch checklist signed off.
 
@@ -417,14 +433,12 @@ The epic is [#1](https://github.com/ivanprjcts/my-tagalog-workbook/issues/1). Ea
 
 ## 12. Immediate next step
 
-Start with Phase 0 in this order:
+Phase 0 and Unit 1 are complete. The next pieces are:
 
-1. [#2](https://github.com/ivanprjcts/my-tagalog-workbook/issues/2) cleanup and baseline lint.
-2. [#3](https://github.com/ivanprjcts/my-tagalog-workbook/issues/3) A1 curriculum and lesson template.
-3. [#5](https://github.com/ivanprjcts/my-tagalog-workbook/issues/5) content accuracy audit.
-4. [#4](https://github.com/ivanprjcts/my-tagalog-workbook/issues/4) content schema and validation.
-5. [#6](https://github.com/ivanprjcts/my-tagalog-workbook/issues/6) app shell.
-6. [#7](https://github.com/ivanprjcts/my-tagalog-workbook/issues/7) progress store.
-7. [#8](https://github.com/ivanprjcts/my-tagalog-workbook/issues/8) tests and CI.
+1. [#14](https://github.com/ivanprjcts/my-tagalog-workbook/issues/14) unit quizzes with a per-tag breakdown.
+2. [#16](https://github.com/ivanprjcts/my-tagalog-workbook/issues/16) searchable vocabulary and phrasebook.
+3. [#17](https://github.com/ivanprjcts/my-tagalog-workbook/issues/17) the full Spanish-speaker reference page.
+4. Native-speaker review of Unit 1.
+5. [#19](https://github.com/ivanprjcts/my-tagalog-workbook/issues/19) Unit 2, using Unit 1 as the template.
 
 Do not author Units 2–6 until Unit 1 has been played end-to-end and the content has been reviewed.

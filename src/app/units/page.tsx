@@ -1,40 +1,43 @@
-import UnitCard from '@/components/UnitCard';
-import { UNITS, LESSONS } from '@/data';
+import { A1_COURSE } from '@/content/a1';
+import { A1_OUTLINE } from '@/content/a1/outline';
+import { PageHeader } from '@/components/layout/PageHeader';
+import { UnitCard } from '@/components/UnitCard';
+import { Callout } from '@/components/ui/Callout';
+
+export const metadata = {
+  title: 'The A1 path',
+  description: 'Six units and 36 lessons, from Tagalog sounds to a functional A1 exit profile.',
+};
 
 export default function UnitsPage() {
-  // Calculate lesson count for each unit
-  const getUnitLessonCount = (unitId: string) => {
-    return LESSONS.filter(lesson => lesson.unitId === unitId).length;
-  };
+  const availableLessons = A1_COURSE.units.flatMap((unit) => unit.lessons);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold">My Tagalog Workbook</h1>
-          <p className="text-gray-600 mt-2">Step-by-step path to fluency.</p>
-        </div>
-      </header>
+    <div>
+      <PageHeader
+        eyebrow="Curriculum"
+        title="The A1 path"
+        description="Six units, six lessons each. Unit 1 is live; the remaining units are being authored in order. The path stays visible so you always know what is next."
+      />
 
-      <main className="max-w-7xl mx-auto px-4 py-12">
-        <div className="mb-8">
-          <h2 className="text-3xl font-bold mb-2">All Units</h2>
-          <p className="text-gray-600">Choose a unit to explore its lessons</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {UNITS.map((unit) => (
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {A1_OUTLINE.map((unit) => (
             <UnitCard
               key={unit.id}
-              id={unit.id}
-              title={unit.title}
-              description={unit.description}
-              level={unit.level}
-              lessonCount={getUnitLessonCount(unit.id)}
+              unit={unit}
+              availableLessons={availableLessons.filter((lesson) => lesson.unitId === unit.id).length}
             />
           ))}
         </div>
-      </main>
+
+        <Callout variant="tip" title="How to use the path" className="mt-10">
+          <p>
+            Do one lesson every two or three days and review for ten minutes on the other days. Do not rush to Unit 6;
+            the early units build the patterns you will reuse in every conversation.
+          </p>
+        </Callout>
+      </div>
     </div>
   );
 }

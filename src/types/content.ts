@@ -99,12 +99,15 @@ export interface Flashcard {
 /**
  * Phoneme for alphabet and pronunciation
  */
+export type LetterUsage = 'native' | 'common' | 'loanword' | 'rare';
+
 export interface Phoneme {
   letter: string;
   uppercase: string;
   lowercase: string;
   pronunciation: string;
   ipa: string; // International Phonetic Alphabet
+  usage: LetterUsage;
   examples: PronunciationExample[];
   notes?: string;
 }
@@ -116,4 +119,12 @@ export interface PronunciationExample {
   word: string;
   english: string;
   emphasis?: string; // Which part emphasizes the sound
+  spanish?: string; // Optional Spanish cognate or contrast
+}
+
+export interface PronunciationRule {
+  title: string;
+  description: string;
+  examples: string[];
+  spanish?: string;
 }

@@ -1,29 +1,36 @@
 import Link from 'next/link';
+import { Badge } from '@/components/ui/Badge';
+import type { OutlineUnit } from '@/content/a1/outline';
 
-interface UnitCardProps {
-  id: string;
-  title: string;
-  description: string;
-  level: 'Beginner' | 'Intermediate' | 'Advanced';
-  lessonCount: number;
-}
-
-export default function UnitCard({ id, title, description, level, lessonCount }: UnitCardProps) {
-  return (
-    <Link href={`/units/${id}`}>
-      <div className="p-6 border rounded-xl hover:shadow-lg transition-shadow bg-white cursor-pointer">
-        <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
-          {level}
-        </span>
-        <h3 className="text-xl font-bold mt-2">{title}</h3>
-        <p className="text-gray-600 mt-1">{description}</p>
-        <div className="mt-4 flex items-center justify-between">
-          <span className="text-sm text-gray-500">{lessonCount} lessons</span>
-          <button className="bg-slate-900 text-white px-4 py-2 rounded-lg hover:bg-slate-700">
-            View Unit
-          </button>
+export function UnitCard({ unit, availableLessons }: { unit: OutlineUnit; availableLessons: number }) {
+  const available = unit.status === 'available';
+  const body = (
+    <div className="flex h-full flex-col rounded-xl border border-line bg-white p-5 shadow-sm transition-colors hover:border-accent/60">
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <div className="text-xs font-bold uppercase tracking-widest text-ink-muted">Unit {unit.order}</div>
+          <h3 className="mt-1 text-lg font-black text-ink">{unit.title}</h3>
+          <p className="text-sm font-semibold text-accent-strong">{unit.subtitle}</p>
         </div>
+        <Badge tone={available ? 'accent' : 'neutral'}>{available ? 'Available' : 'In authoring'}</Badge>
       </div>
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-muted">{unit.description}</p>
+      <div className="mt-4 flex items-center justify-between text-sm">
+        <span className="font-semibold text-ink-muted">
+          {available ? `${availableLessons} of ${unit.lessonTitles.length} lessons live` : `${unit.lessonTitles.length} lessons planned`}
+        </span>
+        {available && <span className="font-bold text-accent-strong">Open unit →</span>}
+      </div>
+    </div>
+  );
+
+  if (!available) {
+    return <div aria-disabled="true">{body}</div>;
+  }
+
+  return (
+    <Link href={`/units/${unit.id}`} className="block h-full">
+      {body}
     </Link>
   );
 }
