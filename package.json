@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "content:check": "tsx scripts/content-check.ts",
     "audio:generate": "tsx scripts/generate-audio.ts",
+    "audio:pairs": "python3 scripts/generate-minimal-pairs.py",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",

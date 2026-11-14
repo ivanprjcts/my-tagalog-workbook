@@ -63,6 +63,17 @@ test('lesson audio uses a pre-recorded Tagalog file', async ({ page }) => {
   await expect(page.getByText(/No Tagalog voice|no Tagalog device voice/)).toHaveCount(0);
 });
 
+test('stress minimal pairs use the custom recordings', async ({ page }) => {
+  await page.goto(LESSON);
+  const first = page.waitForResponse((response) => response.url().includes('/audio/custom/basa-first-stress.mp3'));
+  await page.getByRole('button', { name: 'Listen to bása' }).click();
+  expect([200, 206]).toContain((await first).status());
+
+  const second = page.waitForResponse((response) => response.url().includes('/audio/custom/basa-final-stress.mp3'));
+  await page.getByRole('button', { name: 'Listen to basâ' }).click();
+  expect([200, 206]).toContain((await second).status());
+});
+
 test('review session grades a card and persists the schedule', async ({ page }) => {
   await page.goto('/review');
   await page.getByRole('button', { name: 'Start review' }).click();

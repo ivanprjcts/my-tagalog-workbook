@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { A1_COURSE } from '../a1';
 import { AUDIO_MANIFEST } from '../audio-manifest';
+import { AUDIO_OVERRIDES } from '../audio-overrides';
 
 function publishedTexts(): string[] {
   const texts = new Set<string>();
@@ -33,7 +34,7 @@ describe('audio manifest', () => {
   it('has a non-empty recording for every published playable text', () => {
     const missing: string[] = [];
     for (const text of publishedTexts()) {
-      const path = AUDIO_MANIFEST[text];
+      const path = AUDIO_OVERRIDES[text] ?? AUDIO_MANIFEST[text];
       if (!path) {
         missing.push(`${text} (no manifest entry)`);
         continue;

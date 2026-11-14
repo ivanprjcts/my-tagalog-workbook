@@ -13,6 +13,24 @@ The workbook ships pre-generated Tagalog audio so playback does not depend on th
 - It writes `src/content/audio-manifest.ts`, mapping the exact text to the file.
 - `AudioButton` plays the recording first. If a file is missing or fails, it falls back to the browser's `fil-PH`/`tl-PH` voice, then shows a message if neither is available.
 
+## Stress and glottal-stop minimal pairs
+
+The main TTS voice ignores written stress marks, so four words are generated separately with explicit syllable stress:
+
+- `bása` / `basâ`
+- `túbo` / `tubò`
+
+`scripts/generate-minimal-pairs.py` synthesizes the syllables, applies a longer/louder stressed syllable, and adds a short glottal-like cut at the end of `basâ` and `tubò`. The results live in `public/audio/custom/` and are mapped in `src/content/audio-overrides.ts`.
+
+Run it with:
+
+```bash
+python3 -m pip install --user edge-tts
+npm run audio:pairs
+```
+
+It requires `ffmpeg` in `PATH`, or set `FFMPEG=/path/to/ffmpeg`.
+
 ## Regenerating
 
 Requirements: Python 3 and the `edge-tts` package.

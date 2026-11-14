@@ -57,6 +57,7 @@ Open http://localhost:3000.
 | `npm run test:watch` | Run Vitest in watch mode |
 | `npm run content:check` | Validate all lesson content |
 | `npm run audio:generate` | Regenerate the pre-recorded Tagalog audio and manifest |
+| `npm run audio:pairs` | Rebuild the custom stress/glottal-stop minimal-pair recordings |
 | `npm run check` | Lint, typecheck, test and content-check |
 | `npm start` | Serve the production build |
 

@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { cn } from '@/components/ui/cn';
 import { AUDIO_MANIFEST } from '@/content/audio-manifest';
+import { AUDIO_OVERRIDES } from '@/content/audio-overrides';
 import { useAudioEnabled } from './AudioContext';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
@@ -81,7 +82,7 @@ export function AudioButton({
       return;
     }
 
-    const recorded = AUDIO_MANIFEST[text];
+    const recorded = AUDIO_OVERRIDES[text] ?? AUDIO_MANIFEST[text];
     if (!recorded) {
       await speakWithDevice();
       return;
