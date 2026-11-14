@@ -19,7 +19,7 @@ export const lesson01SoundsAndSpelling: Lesson = {
   estimatedMinutes: 25,
   objectives: [
     'Read the modern Filipino alphabet and the older abakada.',
-    'Pronounce the five Tagalog vowels without English long-vowel glides.',
+    'Pronounce the five Tagalog vowels clearly, using Spanish vowel values as the base and avoiding English long-vowel glides.',
     'Recognize the ng sound, stress and the glottal stop in common words.',
   ],
   canDo: [
@@ -46,7 +46,7 @@ export const lesson01SoundsAndSpelling: Lesson = {
       title: 'Five vowels: a, e, i, o, u',
       pattern: 'a · e · i · o · u',
       explanation:
-        'Keep the vowels short and clean. Do not add the glide that English speakers use in “day” or “go”. Spanish speakers can use the Spanish vowel values as a starting point.',
+        'Keep the vowels short and clean. Start from the Spanish values: a as in casa, e as in mesa, i as in sí, o as in no (without the glide), u as in luna. If you also speak English, do not import the glide from “day” or “go”.',
       examples: [
         { tagalog: 'ama', english: 'father', explanation: 'Two clean a sounds: a-ma.' },
         { tagalog: 'mesa', english: 'table', explanation: 'A Spanish loan, pronounced me-sa.' },
@@ -55,9 +55,9 @@ export const lesson01SoundsAndSpelling: Lesson = {
         { tagalog: 'ulo', english: 'head', explanation: 'Short u and o: u-lo.' },
       ],
       commonMistake: {
-        wrong: 'Pronounce a like the a in English cat, and o like the o in English go.',
-        right: 'Pronounce a like the a in Spanish casa, and o like the o in Spanish no, without the glide.',
-        explanation: 'English long vowels add a glide. Tagalog vowels stay short and pure.',
+        wrong: 'Switch to the English a in cat and the English o in go.',
+        right: 'Keep the Spanish a in casa and the Spanish o in no, without the glide.',
+        explanation: 'Spanish already gives you the right vowel base. English long vowels add a glide; keep the Tagalog vowel short.',
       },
     },
     {
@@ -128,7 +128,7 @@ export const lesson01SoundsAndSpelling: Lesson = {
       variant: 'spanish',
       title: 'Desde el español: you already know the vowels',
       paragraphs: [
-        'Spanish has the same five vowel letters, and the values are close. Use that advantage. The main adjustment is to avoid the English glide in words like “day” and “go”.',
+        'Spanish has the same five vowel letters, and the values are close. Use that advantage. If you also speak English, the main adjustment is to avoid the glide in words like “day” and “go”.',
         'You also already know ñ from Spanish, and the Tagalog r is a flap like the single r in Spanish pero. Many everyday words are Spanish loans: mesa, kape, oras, numero, silya, bintana, kuwarto.',
       ],
       bullets: [
@@ -146,7 +146,7 @@ export const lesson01SoundsAndSpelling: Lesson = {
       ],
       bullets: [
         'Adding a g to ng: say nga, not ga or n-ga.',
-        'Using English long vowels: say ma-ha-l, not may-hal.',
+        'Sliding the vowels as in English: say ma-ha-l, not may-hal. Spanish vowels are already a better base.',
         'Forgetting the glottal stop: basâ is not the same as basa.',
       ],
     },
