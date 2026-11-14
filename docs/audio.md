@@ -15,15 +15,13 @@ The workbook ships pre-generated Tagalog audio so playback does not depend on th
 
 ## Stress and glottal-stop minimal pairs
 
-The main Filipino TTS voice ignores written stress marks, and its syllable rendering can sound English-influenced. Four words are therefore generated with a Spanish voice, using the written accent to place stress:
+The main Filipino TTS voice ignores written stress marks, and its syllable rendering can sound English-influenced. Six words are therefore generated with a Spanish voice, using the written accent to place stress:
 
-- `bása` / `basâ`
-- `túbo` / `tubò`
+- `báka` (cow) / `baká` (maybe) — stress only
+- `basá` (read) / `basâ` (wet) — final stress; the difference is the glottal stop
+- `tubò` (growth) / `tubó` (sugarcane) — final stress; the difference is the glottal stop
 
-`scripts/generate-minimal-pairs.py` uses `es-ES-ElviraNeural` (override with `TAGALOG_PAIR_VOICE`):
-
-- `bása` and `túbo` are synthesized as whole words with the written accent on the first syllable.
-- `basâ` and `tubò` are assembled from two syllables so the second syllable is clearly longer and louder (`ba-SAH`, `tu-BOH`), then given a short glottal-like cut.
+`scripts/generate-minimal-pairs.py` uses `es-ES-ElviraNeural` (override with `TAGALOG_PAIR_VOICE`). It synthesizes the whole word with the written accent to place stress. For `basâ` and `tubò`, it takes the same final-stressed base as `basá`/`tubó` and adds a short glottal-like cut.
 
 Spanish vowels and unaspirated consonants are closer to the target sounds than the English-influenced syllable clips. The results live in `public/audio/custom/` and are mapped in `src/content/audio-overrides.ts`.
 
