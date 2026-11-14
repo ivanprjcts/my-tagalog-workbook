@@ -600,7 +600,8 @@ export const lesson01SoundsAndSpelling: Lesson = {
     'Komisyon sa Wikang Filipino (KWF), ortography guidance — https://kwf.gov.ph',
     'Tagalog.com dictionary — https://www.tagalog.com',
     'Omniglot, Tagalog alphabet — https://omniglot.com/writing/tagalog.htm',
-    'Wiktionary, Tagalog entries — https://en.wiktionary.org',
+    'Wiktionary, basa — https://en.wiktionary.org/wiki/basa',
+    'Pimsleur Tagalog 1 guide, stress/glottal minimal pairs (PDF) — https://d1enwirvb3djmg.cloudfront.net/Pimsleur-Guides-Booklets/Tagalog1-Bklt-MP3_9781442323445.pdf',
   ],
   status: 'published',
 };
