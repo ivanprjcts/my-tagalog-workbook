@@ -78,7 +78,7 @@ export const lesson01SoundsAndSpelling: Lesson = {
       title: 'The ng sound',
       pattern: 'ng = /ŋ/',
       explanation:
-        'Ng is one letter and one sound, like the ng in English sing. At the beginning of a syllable there is no hard g. The very common word mga is pronounced ma-nga.',
+        'Ng is one letter and one sound, /ŋ/. Spanish has it before g in tengo; English sing has it at the end. At the beginning of a syllable there is no hard g. The very common word mga is pronounced ma-nga.',
       examples: [
         { tagalog: 'ngayon', english: 'now / today', explanation: 'Starts with the ng sound: nga-yon.' },
         { tagalog: 'ngiti', english: 'smile', explanation: 'ngi-ti, again with no hard g.' },
@@ -87,7 +87,7 @@ export const lesson01SoundsAndSpelling: Lesson = {
       commonMistake: {
         wrong: 'Say mga as ma-ga, or add a g to ngayon.',
         right: 'Say mga as ma-nga and ngayon as nga-yon.',
-        explanation: 'The ng sound is made at the back of the mouth, like the end of English sing.',
+        explanation: 'The ng sound is made at the back of the mouth; Spanish tengo has it before g, English sing has it at the end.',
       },
     },
     {
@@ -529,7 +529,7 @@ export const lesson01SoundsAndSpelling: Lesson = {
       {
         id: 'check-02-ng',
         type: 'mcq',
-        prompt: 'Which letter represents the /ŋ/ sound, as in English sing?',
+        prompt: 'Which letter represents the /ŋ/ sound, as in the ng of English sing or the n before g in Spanish tengo?',
         options: [
           { id: 'n', text: 'N' },
           { id: 'ng', text: 'Ng' },

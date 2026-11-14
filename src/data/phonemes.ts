@@ -51,7 +51,7 @@ export const PHONEMES: Phoneme[] = [
       { word: 'camera', english: 'camera (English loan)', emphasis: 'ka-me-ra' },
     ],
     notes:
-      'Not used in native Tagalog; native /k/ is written K. In loans, C is /k/ or /s/ depending on the source word. Do not use Spanish spellings like casa or corte as Tagalog examples.',
+      'Not used in native Tagalog; native /k/ is written K. In Spanish loans, C is usually /k/ before a, o, u (casa) and /s/ before e, i (centro); English loans vary. Do not use Spanish spellings like casa or corte as native Tagalog examples.',
   },
   {
     letter: 'D',
@@ -95,7 +95,7 @@ export const PHONEMES: Phoneme[] = [
       { word: 'fiesta', english: 'fiesta / festival (Spanish loan)', emphasis: 'fyes-ta', spanish: 'fiesta' },
     ],
     notes:
-      'Mainly in proper nouns and loans. Older native words often use P where Spanish had F.',
+      'Mainly in proper nouns and loans. Spanish f is the same sound; older native words often use P where Spanish had F.',
   },
   {
     letter: 'G',
@@ -124,7 +124,7 @@ export const PHONEMES: Phoneme[] = [
       { word: 'hapon', english: 'afternoon / Japanese', emphasis: 'ha-pon' },
     ],
     notes:
-      'A light h, like English hello. Spanish j is much stronger; many Spanish j loans became Tagalog h (Jueves → Huwebes).',
+      'A light /h/, not the raspy Spanish j. English hello is a close comparison. Many Spanish j loans became Tagalog h (Jueves → Huwebes).',
   },
   {
     letter: 'I',
@@ -153,7 +153,7 @@ export const PHONEMES: Phoneme[] = [
       { word: 'juice', english: 'juice (English loan)', emphasis: 'dyus' },
     ],
     notes:
-      'Not native. English loans usually use /dʒ/; older Spanish j loans were nativized to H (Jueves → Huwebes). Do not use jueves or joya as Tagalog examples.',
+      'Not native. Spanish j is /x/ and did not pass into Tagalog as /x/; older Spanish j loans became H (Jueves → Huwebes). English loans usually use /dʒ/. Do not use jueves or joya as Tagalog examples.',
   },
   {
     letter: 'K',
@@ -224,7 +224,7 @@ export const PHONEMES: Phoneme[] = [
       { word: 'señorita', english: 'miss (Spanish loan)', emphasis: 'se-nyo-ri-ta', spanish: 'señorita' },
     ],
     notes:
-      'Like the ny in English canyon or the ñ in Spanish niño. Appears mainly in Spanish loans and proper nouns; native Tagalog uses the ny sequence.',
+      'The same sound as Spanish ñ in niño. English canyon is a close comparison. Appears mainly in Spanish loans and proper nouns; native Tagalog uses the ny sequence.',
   },
   {
     letter: 'Ng',
@@ -239,7 +239,7 @@ export const PHONEMES: Phoneme[] = [
       { word: 'ngiti', english: 'smile', emphasis: 'ngi-ti' },
     ],
     notes:
-      'A single letter and a single sound, like the ng in English sing. At the start of a word there is no hard g. The common word mga is pronounced ma-nga, not ma-ga.',
+      'A single letter and a single sound, /ŋ/. Spanish has this sound before g in tengo; English sing has it at the end. At the start of a syllable there is no hard g. The common word mga is pronounced ma-nga, not ma-ga.',
   },
   {
     letter: 'O',
@@ -282,7 +282,7 @@ export const PHONEMES: Phoneme[] = [
       { word: 'quota', english: 'quota (English loan)', emphasis: 'kwo-ta' },
     ],
     notes:
-      'Rare. Native Tagalog writes /k/ with K. Q appears in proper nouns and recent loans, usually followed by u.',
+      'Rare. Native Tagalog writes /k/ with K. Spanish que and qui use the same /k/ sound; English quiz and quota are loans. Q appears mainly in proper nouns and recent loans.',
   },
   {
     letter: 'R',
@@ -354,7 +354,7 @@ export const PHONEMES: Phoneme[] = [
       { word: 'volleyball', english: 'volleyball (English loan)', emphasis: 'vol-yibol' },
     ],
     notes:
-      'Rare. Older Spanish loans often use B (vapor → bapor, verde → berde). Modern loans may keep /v/.',
+      'Rare. Spanish v is pronounced like b, and older Spanish loans often use B in Tagalog (vapor → bapor, verde → berde). Modern English loans may keep /v/.',
   },
   {
     letter: 'W',
@@ -368,7 +368,7 @@ export const PHONEMES: Phoneme[] = [
       { word: 'wika', english: 'language', emphasis: 'wi-ka' },
       { word: 'walang', english: 'without / no', emphasis: 'wa-lang' },
     ],
-    notes: 'Like the w in English water. Often appears before a or e in native words.',
+    notes: 'Like the u in Spanish hueso/agua when it glides, or the w in English water. Often appears before a or e in native words.',
   },
   {
     letter: 'X',
@@ -383,7 +383,7 @@ export const PHONEMES: Phoneme[] = [
       { word: 'examen', english: 'exam (Spanish loan)', emphasis: 'ek-sa-men', spanish: 'examen' },
     ],
     notes:
-      'Rare. Native Tagalog writes the ks sound with ks or k. X appears mainly in names and loans.',
+      'Rare. Spanish x in examen and taxi is close; native Tagalog writes the ks sound with ks or k. X appears mainly in names and loans.',
   },
   {
     letter: 'Y',
@@ -420,9 +420,9 @@ export const PRONUNCIATION_RULES: PronunciationRule[] = [
   {
     title: 'Five vowels, close to Spanish',
     description:
-      'Tagalog has a, e, i, o and u. They are short and clear, much closer to Spanish than to the long/short vowel system of English. The letters e and o have open variants in some words, but the spelling does not change.',
+      'Tagalog has a, e, i, o and u. Start from the Spanish values: they are short and clear. The English long/short distinction does not apply. The letters e and o have open variants in some words, but the spelling does not change.',
     examples: ['ama (father)', 'mesa (table)', 'isda (fish)', 'oras (time)', 'ulo (head)'],
-    spanish: 'Spanish speakers already have the five vowels. Avoid adding the English glide in “go” or “day”.',
+    spanish: 'You already have the five vowels. Keep them short and clean; if you also speak English, avoid the glide in “go” or “day”.',
   },
   {
     title: 'Stress changes meaning',
@@ -434,35 +434,35 @@ export const PRONUNCIATION_RULES: PronunciationRule[] = [
   {
     title: 'Glottal stop',
     description:
-      'A glottal stop is a catch in the throat. It can change meaning at the end of a word. English has it in “uh-oh”; Spanish does not use it as a regular contrast, so it needs practice.',
+      'A glottal stop is a catch in the throat. Spanish does not use it as a regular contrast, so it needs practice; English has it in “uh-oh”. It can change meaning at the end of a word.',
     examples: ['basâ (wet) ends with a catch', 'tubò (sugarcane) ends with a catch'],
     spanish: 'Practise the catch separately: basa… basâ. Do not replace it with a pause or an extra vowel.',
   },
   {
     title: 'The ng sound',
     description:
-      'Ng is one letter and one sound, /ŋ/, like the ng in English sing. At the beginning of a word there is no hard g. The word mga is pronounced ma-nga, not ma-ga.',
+      'Ng is one letter and one sound, /ŋ/. Spanish has it before g in tengo; English sing has it at the end. At the beginning of a word there is no hard g. The word mga is pronounced ma-nga, not ma-ga.',
     examples: ['ngayon (now)', 'ngiti (smile)', 'mga (plural marker)'],
     spanish: 'Spanish has this sound before g (tengo), but not at the start of a syllable. Practise “nga” without a g.',
   },
   {
     title: 'Diphthongs and vowel sequences',
     description:
-      'Tagalog has diphthongs such as ay, aw, ey, iw, oy and uy, and it also has adjacent vowels that belong to separate syllables. Do not force every pair into one English-style glide.',
+      'Tagalog has diphthongs such as ay, aw, ey, iw, oy and uy, and adjacent vowels that belong to separate syllables. Spanish also has diphthongs; the main task is to respect Tagalog syllable boundaries. Do not force every pair into one English-style glide.',
     examples: ['bahay (house)', 'araw (day)', 'ilaw (light)', 'kulay (color)', 'tao (person: ta-o)'],
     spanish: 'Spanish speakers can use their clean vowels, but watch syllable boundaries: ta-o, not “tao” as one blob.',
   },
   {
     title: 'R is a flap',
     description:
-      'The Tagalog r is a single flap, like the r in Spanish pero or the tt in American English butter. It is not the English r.',
+      'The Tagalog r is a single flap, like the r in Spanish pero. The tt in American English butter is a close comparison; it is not the English r.',
     examples: ['marami (many)', 'rosas (roses)', 'rin (also)'],
     spanish: 'Use the Spanish single r, not the trilled rr unless a loanword requires it.',
   },
   {
     title: 'H is not Spanish J',
     description:
-      'Tagalog h is a light /h/, like English hello. Spanish j is a stronger, raspier sound. Many Spanish j loans were nativized to h in Tagalog.',
+      'Tagalog h is a light /h/ (English hello is close). Spanish j is a stronger, raspier sound. Many Spanish j loans became h in Tagalog.',
     examples: ['hapon (afternoon)', 'halaman (plant)', 'Jueves → Huwebes'],
     spanish: 'Do not pronounce Tagalog h with the back-of-the-throat Spanish j.',
   },

@@ -165,9 +165,11 @@ export const AlphabetViewer: React.FC<AlphabetViewerProps> = ({ className = '' }
         <h4 className="mb-2 font-semibold text-stone-900">How to practise</h4>
         <ul className="space-y-2 text-sm text-stone-700">
           <li>• Say each example aloud; the spelling is mostly predictable.</li>
-          <li>• Keep the vowels short and clean, closer to Spanish than to English.</li>
+          <li>• Start from the Spanish vowels a, e, i, o, u; keep them short and clean.</li>
+          <li>• The Tagalog r is a flap, like the single r in Spanish pero.</li>
           <li>• Practise the ng sound at the start of a syllable without adding a g.</li>
           <li>• Listen for stress and the glottal stop; they can change the meaning.</li>
+          <li>• If you also speak English, avoid English long-vowel glides.</li>
           <li>• Learn loanword spellings as vocabulary, not as exceptions to a rule.</li>
         </ul>
       </div>
