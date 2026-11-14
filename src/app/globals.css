@@ -1,26 +1,122 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #f7f3ea;
+  --paper-strong: #efe8da;
+  --ink: #1f2a30;
+  --ink-muted: #5b666b;
+  --line: #d9d1c2;
+  --accent: #0f766e;
+  --accent-strong: #115e59;
+  --accent-soft: #d9f0ec;
+  --sun: #b45309;
+  --sun-soft: #fdf0d5;
+  --rose: #b91c1c;
+  --rose-soft: #fde8e8;
+  --sky: #0369a1;
+  --sky-soft: #e0f2fe;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-paper-strong: var(--paper-strong);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-sun: var(--sun);
+  --color-sun-soft: var(--sun-soft);
+  --color-rose: var(--rose);
+  --color-rose-soft: var(--rose-soft);
+  --color-sky: var(--sky);
+  --color-sky-soft: var(--sky-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* A paper-like grid for the hero, without using an image. */
+.paper-grid {
+  background-image:
+    linear-gradient(to right, rgb(15 118 110 / 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(15 118 110 / 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.prose-lesson p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+.prose-lesson ul {
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.prose-lesson li {
+  margin-bottom: 0.35rem;
+  line-height: 1.65;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+    font-size: 11pt;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  .print-break {
+    break-before: page;
+  }
 }
