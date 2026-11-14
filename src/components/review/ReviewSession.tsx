@@ -6,6 +6,7 @@ import { useProgress } from '@/lib/progress/useProgress';
 import { REVIEW_CARDS, type ReviewCard } from '@/lib/review/cards';
 import type { ReviewGrade } from '@/lib/progress/types';
 import { Badge } from '@/components/ui/Badge';
+import { AudioButton } from '@/components/lesson/AudioButton';
 import { Button, buttonStyles } from '@/components/ui/Button';
 import { EmptyState } from '@/components/ui/EmptyState';
 import { ProgressBar } from '@/components/ui/ProgressBar';
@@ -127,6 +128,9 @@ export function ReviewSession() {
       <div className="mt-8 rounded-xl border border-line bg-paper p-8 text-center">
         <div className="text-xs font-bold uppercase tracking-widest text-ink-muted">Tagalog</div>
         <div className="mt-2 text-4xl font-black text-ink">{card.front}</div>
+        <div className="mt-3 flex justify-center">
+          <AudioButton text={card.front} compact label="Audio" />
+        </div>
         {revealed && (
           <div className="mt-6 border-t border-line pt-5">
             <div className="text-xs font-bold uppercase tracking-widest text-ink-muted">English</div>
