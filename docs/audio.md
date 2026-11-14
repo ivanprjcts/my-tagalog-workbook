@@ -20,7 +20,12 @@ The main Filipino TTS voice ignores written stress marks, and its syllable rende
 - `bása` / `basâ`
 - `túbo` / `tubò`
 
-`scripts/generate-minimal-pairs.py` synthesizes the whole word with `es-ES-ElviraNeural` (override with `TAGALOG_PAIR_VOICE`), then adds a short glottal-like cut at the end of `basâ` and `tubò`. Spanish vowels and unaspirated consonants are closer to the target sounds than the English-influenced syllable clips. The results live in `public/audio/custom/` and are mapped in `src/content/audio-overrides.ts`.
+`scripts/generate-minimal-pairs.py` uses `es-ES-ElviraNeural` (override with `TAGALOG_PAIR_VOICE`):
+
+- `bása` and `túbo` are synthesized as whole words with the written accent on the first syllable.
+- `basâ` and `tubò` are assembled from two syllables so the second syllable is clearly longer and louder (`ba-SAH`, `tu-BOH`), then given a short glottal-like cut.
+
+Spanish vowels and unaspirated consonants are closer to the target sounds than the English-influenced syllable clips. The results live in `public/audio/custom/` and are mapped in `src/content/audio-overrides.ts`.
 
 Run it with:
 
