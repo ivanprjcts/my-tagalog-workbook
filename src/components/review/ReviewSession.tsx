@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { A1_LESSONS } from '@/content/a1';
 import { useProgress } from '@/lib/progress/useProgress';
 import { REVIEW_CARDS, type ReviewCard } from '@/lib/review/cards';
 import type { ReviewGrade } from '@/lib/progress/types';
@@ -14,7 +13,7 @@ import { ProgressBar } from '@/components/ui/ProgressBar';
 const SESSION_SIZE = 10;
 
 export function ReviewSession() {
-  const { stats, getDueCardIds, gradeCard } = useProgress(A1_LESSONS.length);
+  const { getDueCardIds, gradeCard } = useProgress();
   const [status, setStatus] = useState<'idle' | 'reviewing' | 'finished'>('idle');
   const [queue, setQueue] = useState<ReviewCard[]>([]);
   const [index, setIndex] = useState(0);
@@ -74,7 +73,7 @@ export function ReviewSession() {
             </p>
           </div>
           <div className="rounded-lg border border-line bg-paper p-4 text-center">
-            <div className="text-3xl font-black text-accent-strong">{stats.cardsDue}</div>
+            <div className="text-3xl font-black text-accent-strong">{dueIds.length}</div>
             <div className="text-xs font-semibold uppercase tracking-wide text-ink-muted">due today</div>
           </div>
         </div>

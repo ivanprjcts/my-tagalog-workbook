@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import type { Lesson } from '@/content/schema';
-import { A1_COURSE, A1_LESSONS } from '@/content/a1';
+import { A1_COURSE } from '@/content/a1';
 import { useProgress } from '@/lib/progress/useProgress';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { Badge } from '@/components/ui/Badge';
@@ -29,7 +29,7 @@ export function LessonView({
   previous?: LessonLink;
   next?: LessonLink;
 }) {
-  const { progress, getLessonProgress, markLessonStarted, addLessonTime } = useProgress(A1_LESSONS.length);
+  const { progress, getLessonProgress, markLessonStarted, addLessonTime } = useProgress();
   const lessonProgress = getLessonProgress(lesson.id);
   const unit = A1_COURSE.units.find((item) => item.id === lesson.unitId);
   const startedAt = useRef<number>(0);

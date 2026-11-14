@@ -1,13 +1,12 @@
 'use client';
 
 import type { Lesson } from '@/content/schema';
-import { A1_LESSONS } from '@/content/a1';
 import { useProgress } from '@/lib/progress/useProgress';
 import { Badge } from '@/components/ui/Badge';
 import { ExerciseRunner, type ExerciseSummary } from './ExerciseRunner';
 
 export function LessonCheck({ lesson }: { lesson: Lesson }) {
-  const { getLessonProgress, recordLessonScore } = useProgress(A1_LESSONS.length);
+  const { getLessonProgress, recordLessonScore } = useProgress();
   const progress = getLessonProgress(lesson.id);
   const passScore = lesson.check.passScore ?? 80;
 
