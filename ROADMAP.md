@@ -11,25 +11,25 @@ The work is tracked in the GitHub epic [#1](https://github.com/ivanprjcts/my-tag
 ### Implemented
 
 - **Phase 0 implementation is complete.** Repo hygiene, metadata, README, lint, type-checking, content validation, test harness, CI and the app shell are in place. Native-speaker review remains open.
-- **Unit 1 — Sounds & Survival is complete.** Six lessons: sounds and spelling, greetings and politeness, names and introductions, people and pronouns, numbers and money, survival phrases and review.
+- **Units 1–2 are complete.** Unit 1 (Sounds & Survival) covers sounds, greetings, introductions, pronouns, numbers and survival phrases. Unit 2 (People & Things) covers ang/ng/sa, si/ni/kay, demonstratives, may/wala, adjectives, possession and family.
 - **A real learning loop.** Each lesson has objectives, a can-do statement, vocabulary with audio buttons, grammar patterns, a dialogue with a translation toggle, eight-plus exercises, a lesson check and review cards.
 - **Exercise engine and UI.** Multiple choice, multi-select, matching, fill-in-the-blank, word bank, listening, dictation, categorization, ordering, translation, error correction and conjugation.
 - **Progress store v2.** Versioned localStorage, migration from the old prototype key, lesson completion, best scores, time tracking, streak, export/import and reset.
 - **Spaced review.** Four-grade SM-2 variant, new/due queue, session summary, persistence and tests.
 - **Reference page.** Corrected alphabet and pronunciation reference plus the A1 grammar rules.
 - **Quality gates.** Vitest, React Testing Library, Playwright, `content:check`, lint, typecheck, build and GitHub Actions.
-- **Current content totals:** 1 unit, 6 published lessons, 60 exercises, 36 check questions, 109 vocabulary items.
+- **Current content totals:** 2 units, 12 published lessons, 120 exercises, 72 check questions, 219 vocabulary items.
 
 ### Verified locally
 
-- `npm run check` passes: lint, typecheck, 44 unit/component tests and content validation.
-- `npm run test:e2e` passes: lesson practice, lesson check, persistence after reload, review scheduling and 390px overflow.
-- `npm run build` generates 20 static pages, including all six Unit 1 lessons.
+- `npm run check` passes: lint, typecheck, 56 unit/component tests and content validation.
+- `npm run test:e2e` passes: lesson practice, lesson check, persistence after reload, review scheduling, both unit quizzes and 390px overflow.
+- `npm run build` generates 28 static pages, including all twelve lessons and both unit quizzes.
 - A Playwright pass through the full Unit 1 lesson check records completion and survives reload.
 
 ### Remaining
 
-- Units 2–6 and the final A1 exam.
+- Units 3–6 and the final A1 exam.
 - Unit-level quizzes with a per-tag breakdown (lesson checks are done).
 - Searchable vocabulary index and phrasebook on the reference page.
 - A dedicated “Tagalog for Spanish speakers” reference page (the per-lesson notes are in place).
@@ -336,7 +336,7 @@ The epic is [#1](https://github.com/ivanprjcts/my-tagalog-workbook/issues/1). Ea
 | [#17](https://github.com/ivanprjcts/my-tagalog-workbook/issues/17) | Spanish-speaker companion layer |
 | [#18](https://github.com/ivanprjcts/my-tagalog-workbook/issues/18) | Author Unit 1 — Sounds & Survival (6 lessons) |
 
-**Status:** the engine, audio, review, lesson checks and Unit 1 are implemented. Unit quizzes, the searchable reference and the full Spanish reference page remain open. Native-speaker review is still pending.
+**Status:** the engine, audio, review, lesson checks, both unit quizzes and Units 1–2 are implemented. The searchable reference and the full Spanish reference page remain open. Native-speaker review is still pending.
 
 **Exit criteria:** all six Unit 1 lessons are playable end-to-end; each has audio, exercises, a check and flashcards; the unit quiz scores and unlocks correctly; the dashboard shows real progress; `content:check` passes; a native speaker has reviewed the unit.
 
@@ -354,7 +354,7 @@ The epic is [#1](https://github.com/ivanprjcts/my-tagalog-workbook/issues/1). Ea
 | [#24](https://github.com/ivanprjcts/my-tagalog-workbook/issues/24) | A1 final exam and printable certificate |
 | [#25](https://github.com/ivanprjcts/my-tagalog-workbook/issues/25) | Graded reading, listening and mixed review |
 
-**Status:** not started. Unit 1 is the authoring template.
+**Status:** Unit 2 is complete. Units 3–6, the final exam and the graded practice library remain.
 
 **Exit criteria:** all 36 lessons pass `content:check`; every unit has a quiz; the final exam covers every unit and can-do statement; the mistake bank and mixed practice work; no full focus-system tables appear in A1.
 
@@ -435,10 +435,10 @@ The epic is [#1](https://github.com/ivanprjcts/my-tagalog-workbook/issues/1). Ea
 
 Phase 0 and Unit 1 are complete. The next pieces are:
 
-1. [#14](https://github.com/ivanprjcts/my-tagalog-workbook/issues/14) unit quizzes with a per-tag breakdown.
+1. Native-speaker review of Units 1–2.
 2. [#16](https://github.com/ivanprjcts/my-tagalog-workbook/issues/16) searchable vocabulary and phrasebook.
 3. [#17](https://github.com/ivanprjcts/my-tagalog-workbook/issues/17) the full Spanish-speaker reference page.
-4. Native-speaker review of Unit 1.
-5. [#19](https://github.com/ivanprjcts/my-tagalog-workbook/issues/19) Unit 2, using Unit 1 as the template.
+4. [#20](https://github.com/ivanprjcts/my-tagalog-workbook/issues/20) Unit 3 — Food & Market.
+5. [#21](https://github.com/ivanprjcts/my-tagalog-workbook/issues/21) Unit 4 — Daily Life & Time.
 
-Do not author Units 2–6 until Unit 1 has been played end-to-end and the content has been reviewed.
+Use Units 1–2 as the authoring standard. Keep every new lesson at the same density and quality.

@@ -1,5 +1,6 @@
 import type { Course, Lesson, Unit } from '../schema';
 import { unit1 } from './unit-01';
+import { unit2 } from './unit-02';
 
 /**
  * The A1 course.
@@ -14,7 +15,7 @@ export const A1_COURSE: Course = {
   description:
     'A functional A1 path for Spanish speakers learning Tagalog through English: 6 units, 36 lessons, dialogues, audio, exercises and spaced review.',
   level: 'A1',
-  units: [unit1],
+  units: [unit1, unit2],
 };
 
 export const A1_LESSONS: Lesson[] = A1_COURSE.units.flatMap((unit) => unit.lessons);

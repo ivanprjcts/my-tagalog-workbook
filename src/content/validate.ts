@@ -197,6 +197,7 @@ export function validateCourse(input: unknown): ValidationResult {
   const lessonIds: string[] = [];
   const lessonSlugs: string[] = [];
   const lessonCheckIds: string[] = [];
+  const vocabularyIds: string[] = [];
 
   course.units.forEach((unit, unitIndex) => {
     const unitPath = `course.units[${unitIndex}]`;
@@ -219,6 +220,7 @@ export function validateCourse(input: unknown): ValidationResult {
       lessonIds.push(lesson.id);
       lessonSlugs.push(`${lesson.unitId}/${lesson.slug}`);
       lessonCheckIds.push(lesson.check.id);
+      vocabularyIds.push(...lesson.vocabulary.map((entry) => entry.id));
       validateLesson(lesson, lessonPath, problems);
     });
   });
@@ -226,6 +228,7 @@ export function validateCourse(input: unknown): ValidationResult {
   checkUnique(problems, 'course', lessonIds, 'lesson id');
   checkUnique(problems, 'course', lessonSlugs, 'lesson route');
   checkUnique(problems, 'course', lessonCheckIds, 'lesson check id');
+  checkUnique(problems, 'course', vocabularyIds, 'vocabulary id (across lessons)');
 
   return { course, problems };
 }

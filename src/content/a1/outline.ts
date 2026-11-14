@@ -39,7 +39,7 @@ export const A1_OUTLINE: OutlineUnit[] = [
     subtitle: 'Describe the world around you',
     description:
       'The core markers ang, ng and sa, personal names, demonstratives, adjectives, possession and family.',
-    status: 'planned',
+    status: 'available',
     lessonTitles: [
       'Ang, ng, sa',
       'Si, ni, kay',

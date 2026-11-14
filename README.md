@@ -13,7 +13,7 @@ A static, mobile-first interactive workbook for a Spanish speaker learning Tagal
 - Next.js 16 App Router, React 19, TypeScript, Tailwind 4.
 - Static export for GitHub Pages.
 - A1 content schema with build-time validation (`npm run content:check`).
-- Unit 1 — **Sounds & Survival**: six complete lessons (sounds, greetings, introductions, pronouns, numbers, survival phrases) with vocabulary, dialogues, 60 exercises and six lesson checks.
+- Units 1–2 — **Sounds & Survival** and **People & Things**: twelve complete lessons with vocabulary, dialogues, 120 exercises and twelve lesson checks.
 - Exercise engine and UI for multiple choice, multi-select, matching, fill-in-the-blank, word bank, listening, dictation, categorization, ordering, translation, error correction and conjugation.
 - Answer-key tests: every practice and check answer in the course is graded as correct.
 - Lesson progress, time tracking, streak, best score and completion.
@@ -26,13 +26,13 @@ A static, mobile-first interactive workbook for a Spanish speaker learning Tagal
 
 ## Not implemented yet
 
-- Units 2–6 and the final A1 exam.
+- Units 3–6 and the final A1 exam.
 - The final A1 exam and printable certificate.
 - Graded reading/listening library and mistake bank.
 - PWA/offline mode.
 - Native-speaker review of the shipped lesson (see the review log in `docs/content-sources.md`).
 
-The roadmap issues describe each remaining piece. Unit 1 is deliberately the reference implementation: do not scale to the other units until it has been played end-to-end and reviewed.
+The roadmap issues describe each remaining piece. Unit 1 is the reference implementation. Unit 2 follows the same template; use both as the authoring standard for Units 3–6.
 
 ## Local development
 

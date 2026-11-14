@@ -49,6 +49,13 @@ export const exerciseTagSchema = z.enum([
   'survival',
   'questions',
   'language',
+  'adjectives',
+  'possession',
+  'family',
+  'demonstratives',
+  'existence',
+  'objects',
+  'animals',
 ]);
 export type ExerciseTag = z.infer<typeof exerciseTagSchema>;
 

@@ -66,6 +66,27 @@ test('review session grades a card and persists the schedule', async ({ page }) 
   expect(cards).toBe(1);
 });
 
+test('Unit 2 lessons load and the first exercise gives feedback', async ({ page }) => {
+  await page.goto('/units/unit-2/lessons/ang-ng-sa');
+  await expect(page.getByRole('heading', { name: 'Ang, ng and sa', level: 1 })).toBeVisible();
+  const practice = page.locator('#practice');
+  await practice.getByLabel('ang', { exact: true }).check();
+  await practice.getByRole('button', { name: 'Check answer' }).click();
+  await expect(practice.getByText('Correct', { exact: true })).toBeVisible();
+
+  const slugs = ['si-ni-kay', 'ito-iyan-iyon', 'adjectives-and-linker', 'possession', 'descriptions-and-family'];
+  for (const slug of slugs) {
+    await page.goto(`/units/unit-2/lessons/${slug}`);
+    await expect(page.locator('h1').first()).toBeVisible();
+  }
+});
+
+test('Unit 2 unit quiz loads', async ({ page }) => {
+  await page.goto('/units/unit-2/quiz');
+  await expect(page.getByRole('heading', { name: /unit quiz/i, level: 1 })).toBeVisible();
+  await expect(page.getByText('18 questions', { exact: true })).toBeVisible();
+});
+
 test('unit quiz loads and grades the first question', async ({ page }) => {
   await page.goto('/units/unit-1/quiz');
   await expect(page.getByRole('heading', { name: /unit quiz/i, level: 1 })).toBeVisible();

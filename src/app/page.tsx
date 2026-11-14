@@ -33,7 +33,7 @@ export default function Home() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-ink-muted">
-              Unit 1 is live. The full A1 path is being authored in phases; the outline shows exactly what is next.
+              Units 1 and 2 are live. The full A1 path is being authored in phases; the outline shows exactly what is next.
             </p>
           </div>
         </div>
@@ -108,8 +108,8 @@ export default function Home() {
             <div>
               <h2 className="text-xl font-black text-ink">What is next</h2>
               <p className="mt-1 max-w-2xl text-sm text-ink-muted">
-                Unit 1 is complete and playable end-to-end. The next phase authors Units 2–6, the final A1 exam, graded
-                reading and listening, and the searchable reference.
+                Units 1 and 2 are complete and playable end-to-end. The next phase authors Units 3–6, the final A1
+                exam, graded reading and listening, and the searchable reference.
               </p>
             </div>
             <Link href="/progress" className={buttonStyles('secondary', 'md')}>
