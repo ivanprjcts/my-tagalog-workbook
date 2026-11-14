@@ -9,6 +9,7 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "content:check": "tsx scripts/content-check.ts",
+    "audio:generate": "tsx scripts/generate-audio.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",

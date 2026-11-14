@@ -52,6 +52,17 @@ test('lesson check records completion and survives a reload', async ({ page }) =
   await expect(page.getByText('Completed', { exact: true }).first()).toBeVisible();
 });
 
+test('lesson audio uses a pre-recorded Tagalog file', async ({ page }) => {
+  await page.goto(LESSON);
+  const responsePromise = page.waitForResponse(
+    (response) => response.url().includes('/audio/') && response.url().endsWith('.mp3'),
+  );
+  await page.getByRole('button', { name: 'Listen to titik' }).click();
+  const response = await responsePromise;
+  expect([200, 206]).toContain(response.status());
+  await expect(page.getByText(/No Tagalog voice|no Tagalog device voice/)).toHaveCount(0);
+});
+
 test('review session grades a card and persists the schedule', async ({ page }) => {
   await page.goto('/review');
   await page.getByRole('button', { name: 'Start review' }).click();

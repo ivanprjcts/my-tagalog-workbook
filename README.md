@@ -13,6 +13,7 @@ A static, mobile-first interactive workbook for a Spanish speaker learning Tagal
 - Next.js 16 App Router, React 19, TypeScript, Tailwind 4.
 - Static export for GitHub Pages.
 - A1 content schema with build-time validation (`npm run content:check`).
+- Pre-generated Tagalog audio for every vocabulary item, dialogue line, pattern example, listening prompt and dictation prompt, with a browser-voice fallback. See [docs/audio.md](docs/audio.md).
 - Units 1–2 — **Sounds & Survival** and **People & Things**: twelve complete lessons with vocabulary, dialogues, 120 exercises and twelve lesson checks.
 - Exercise engine and UI for multiple choice, multi-select, matching, fill-in-the-blank, word bank, listening, dictation, categorization, ordering, translation, error correction and conjugation.
 - Answer-key tests: every practice and check answer in the course is graded as correct.
@@ -27,10 +28,9 @@ A static, mobile-first interactive workbook for a Spanish speaker learning Tagal
 ## Not implemented yet
 
 - Units 3–6 and the final A1 exam.
-- The final A1 exam and printable certificate.
 - Graded reading/listening library and mistake bank.
 - PWA/offline mode.
-- Native-speaker review of the shipped lesson (see the review log in `docs/content-sources.md`).
+- Native-speaker review of the shipped lessons and audio (see the review log in `docs/content-sources.md`).
 
 The roadmap issues describe each remaining piece. Unit 1 is the reference implementation. Unit 2 follows the same template; use both as the authoring standard for Units 3–6.
 
@@ -56,6 +56,7 @@ Open http://localhost:3000.
 | `npm run test` | Run Vitest |
 | `npm run test:watch` | Run Vitest in watch mode |
 | `npm run content:check` | Validate all lesson content |
+| `npm run audio:generate` | Regenerate the pre-recorded Tagalog audio and manifest |
 | `npm run check` | Lint, typecheck, test and content-check |
 | `npm start` | Serve the production build |
 
