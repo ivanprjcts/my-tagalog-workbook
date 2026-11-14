@@ -65,7 +65,7 @@ function PatternBlock({ section }: { section: PatternSection }) {
         </table>
       </div>
       {section.commonMistake && (
-        <Callout variant="mistake" title="Common mistake" className="mt-4">
+        <Callout variant="mistake" className="mt-4">
           <p>
             <span className="font-semibold">Instead of:</span> {section.commonMistake.wrong}
           </p>

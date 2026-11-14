@@ -7,7 +7,7 @@ export const lesson04Adjectives: Lesson = {
   title: 'Adjectives and the linker',
   subtitle: 'Describe people and things without adding “is”',
   description:
-    'Use common ma- adjectives, link them to nouns with na or -ng, intensify with napaka-, and describe people and things without plural agreement.',
+    'Use common ma- adjectives, link them to nouns with na or -ng, intensify with napaka-, and understand how gender and optional plural forms work.',
   level: 'A1',
   order: 4,
   estimatedMinutes: 25,
@@ -15,7 +15,7 @@ export const lesson04Adjectives: Lesson = {
     'Use common ma- adjectives in predicate-first sentences.',
     'Link an adjective to a noun with na or -ng.',
     'Use napaka- for emphasis.',
-    'Avoid adding plural or gender agreement to adjectives.',
+    'Recognize common plural adjective forms without treating them as obligatory.',
   ],
   canDo: [
     'I can describe a person, place or object with a simple adjective.',
@@ -24,15 +24,17 @@ export const lesson04Adjectives: Lesson = {
   sections: [
     {
       type: 'text',
-      title: 'Adjectives do not agree',
+      title: 'Adjectives do not agree in gender',
       paragraphs: [
-        'Tagalog adjectives do not change for gender or number. Maganda means beautiful whether the topic is one house or several houses. The marker and the noun tell you the rest.',
-        'There are two common positions: predicate-first (Maganda ang bahay) or before the noun with a linker (magandang bahay). Both are useful; the first is a full sentence, the second is a noun phrase.',
+        'Tagalog adjectives do not change for gender. Maganda means beautiful whether the noun refers to a man, a woman, a house or a tree. This is one place where Spanish speakers can relax.',
+        'Number is different. Many ma- adjectives form a plural by reduplicating the first syllable: maganda → magaganda, mabait → mababait, masaya → masasaya. The plural form is common and careful, but it is optional because mga already marks the noun as plural. At A1, learn the singular form first and recognize the common plurals.',
       ],
       bullets: [
         'Maganda ang bahay. — The house is beautiful.',
+        'Magaganda ang mga bahay. — The houses are beautiful.',
+        'Mabait ang bata. — The child is kind.',
+        'Mababait ang mga bata. — The children are kind.',
         'magandang bahay — beautiful house',
-        'Mabait ang mga bata. — The children are kind.',
         'mabait na bata — kind child',
       ],
     },
@@ -47,6 +49,11 @@ export const lesson04Adjectives: Lesson = {
           tagalog: 'Maganda ang bahay.',
           english: 'The house is beautiful.',
           explanation: 'Adjective first; ang bahay is the topic.',
+        },
+        {
+          tagalog: 'Magaganda ang mga bahay.',
+          english: 'The houses are beautiful.',
+          explanation: 'The plural adjective magaganda is common but optional; ang mga already marks the plural.',
         },
         {
           tagalog: 'Mabait ang guro.',
@@ -120,7 +127,7 @@ export const lesson04Adjectives: Lesson = {
         { tagalog: 'Mahal ang relo; mura ang prutas.', english: 'The watch is expensive; the fruit is cheap.', explanation: 'Price pair.' },
         { tagalog: 'Bago ang cellphone ko; luma ang bahay.', english: 'My phone is new; the house is old.', explanation: 'Age pair.' },
         { tagalog: 'Mainit ang kape; malamig ang tubig.', english: 'The coffee is hot; the water is cold.', explanation: 'Temperature pair.' },
-        { tagalog: 'Masaya ang mga bata; malungkot si Ana.', english: 'The children are happy; Ana is sad.', explanation: 'Emotion pair.' },
+        { tagalog: 'Masasaya ang mga bata; malungkot si Ana.', english: 'The children are happy; Ana is sad.', explanation: 'Emotion pair; masasaya is the optional plural form.' },
         { tagalog: 'Mabilis ang kotse; mabagal ang bus.', english: 'The car is fast; the bus is slow.', explanation: 'Speed pair.' },
         { tagalog: 'Madali ang lesson; mahirap ang exam.', english: 'The lesson is easy; the exam is difficult.', explanation: 'Difficulty pair.' },
       ],
@@ -128,14 +135,14 @@ export const lesson04Adjectives: Lesson = {
     {
       type: 'callout',
       variant: 'spanish',
-      title: 'Desde el español: no gender, no plural',
+      title: 'Desde el español: no gender, optional plural',
       paragraphs: [
-        'Spanish adjectives agree with the noun: casa bonita, casas bonitas. Tagalog adjectives do not. Maganda ang bahay and Maganda ang mga bahay both use maganda.',
-        'The linker has no direct Spanish equivalent. Think of it as a pronunciation bridge between the adjective and the noun: magandang bahay, mabait na bata.',
+        'Spanish adjectives agree in gender and number: casa bonita, casas bonitas. Tagalog adjectives do not agree in gender. Plural adjectives often reduplicate the first syllable: maganda → magaganda, mabait → mababait, masaya → masasaya.',
+        'The plural form is optional; mga already marks the noun as plural. Magandang bahay and magagandang bahay can both describe beautiful houses. The linker has no direct Spanish equivalent; think of it as a bridge between the adjective and the noun.',
       ],
       bullets: [
-        'Maganda ang bahay. / Maganda ang mga bahay.',
-        'Mabait ang bata. / Mabait ang mga bata.',
+        'Maganda ang bahay. / Magaganda ang mga bahay.',
+        'Mabait ang bata. / Mababait ang mga bata.',
         'magandang bahay — casa bonita',
         'mabait na bata — niño bueno',
       ],
@@ -190,7 +197,7 @@ export const lesson04Adjectives: Lesson = {
         'I can describe something with an adjective and ang.',
         'I can link an adjective to a noun with na or -ng.',
         'I can use napaka- for emphasis.',
-        'I can avoid adding gender or plural agreement.',
+        'I can describe people without gender agreement and recognize common plural adjective forms.',
       ],
     },
   ],
@@ -299,7 +306,7 @@ export const lesson04Adjectives: Lesson = {
       tagalog: 'masaya',
       english: 'happy',
       partOfSpeech: 'adjective',
-      example: { tagalog: 'Masaya ang mga bata.', english: 'The children are happy.' },
+      example: { tagalog: 'Masaya ang bata.', english: 'The child is happy.' },
       audioText: 'masaya',
       tags: ['adjectives'],
     },
