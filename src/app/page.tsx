@@ -106,10 +106,10 @@ export default function Home() {
         <section className="rounded-xl border border-line bg-white p-6 shadow-sm sm:p-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <h2 className="text-xl font-black text-ink">What is being built next</h2>
+              <h2 className="text-xl font-black text-ink">What is next</h2>
               <p className="mt-1 max-w-2xl text-sm text-ink-muted">
-                The lesson engine, exercise types, audio and spaced review come first. Units 2–6 follow once Unit 1 is
-                playable end-to-end and reviewed.
+                Unit 1 is complete and playable end-to-end. The next phase authors Units 2–6, the final A1 exam, graded
+                reading and listening, and the searchable reference.
               </p>
             </div>
             <Link href="/progress" className={buttonStyles('secondary', 'md')}>
