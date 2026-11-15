@@ -10,7 +10,7 @@ Tagalog content in this workbook must be verifiable. A plausible-sounding exampl
 - **Omniglot — Tagalog** — https://omniglot.com/writing/tagalog.htm — alphabet history, abakada and modern Filipino alphabet.
 - **A reference grammar** — e.g. Teresita V. Ramos and Maria Lourdes S. Bautista, *Handbook of Tagalog Verbs: Inflections, Modes, and Aspects*. Use for aspect and focus questions, not for copying exercises.
 - **A learner dictionary** — e.g. a current Tagalog–English dictionary. Use for glosses and parts of speech.
-- **Pimsleur Tagalog 1 guide** — https://d1enwirvb3djmg.cloudfront.net/Pimsleur-Guides-Booklets/Tagalog1-Bklt-MP3_9781442323445.pdf — explicit stress and glottal-stop minimal pairs. Use for checks such as `basá` (read, final stress, no glottal) vs `basâ` (wet, final stress + glottal) and `tubó` (sugarcane) vs `tubò` (growth).
+- **Pimsleur Tagalog 1 guide** — https://d1enwirvb3djmg.cloudfront.net/Pimsleur-Guides-Booklets/Tagalog1-Bklt-MP3_9781442323445.pdf — explicit stress and glottal-stop minimal pairs. It lists a final-stress variant `basá` for “read”; a native-speaker consultation for this workbook confirmed the first-stress form `bása` used here. Use it with that caveat, and for `tubó` (sugarcane) vs `tubò` (growth).
 
 For Spanish-influence claims, prefer named sources (etymology dictionaries, KWF materials, academic articles) over unsourced blog posts. If a claim is uncertain, mark it as a hypothesis or remove it.
 
@@ -32,7 +32,8 @@ For Spanish-influence claims, prefer named sources (etymology dictionaries, KWF 
 
 | Date | Reviewer | Scope | Result | Notes |
 |---|---|---|---|---|
-| — | — | — | Pending | No native-speaker review has been recorded yet. |
+| 2026-11-15 | Learner-provided native-speaker consultation | Pronunciation of `basa` | Confirmed `bása` (read) with first-syllable stress | Dictionaries may list a final-stress variant `basá`; the workbook follows the native-speaker form. |
+| — | — | — | Pending | Full lesson and audio review still pending. |
 
 ## Known simplifications at A1
 
@@ -46,7 +47,7 @@ These are deliberate simplifications, not errors. They must be labeled as simpli
 
 ## Stress and glottal-check notes
 
-- `basá` (read/reading) has final stress and no glottal stop. `basâ` (wet) has final stress plus a final glottal stop. The minimal pair is glottal, not stress.
+- `bása` (read/reading) has first-syllable stress and no glottal stop. `basâ` (wet) has final-syllable stress plus a final glottal stop. The native-speaker consultation for this workbook confirmed `bása`; some dictionaries list a final-stress variant `basá`. The workbook uses `bása`.
 - `tubó` (sugarcane) has final stress and no glottal stop. `tubò` (growth/sprout) has final stress plus a final glottal stop.
 - `báka` (cow) and `baká` (maybe) are a stress-only pair.
 - `basa` is the root of the verb family (`bumasa`, `basahin`); derived forms have their own stress patterns, so do not use them to infer the citation form.

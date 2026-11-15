@@ -428,15 +428,15 @@ export const PRONUNCIATION_RULES: PronunciationRule[] = [
     title: 'Stress changes meaning',
     description:
       'Stress can fall on different syllables and change the word. Written accents are a teaching aid, not normal everyday spelling. Listen for the stressed syllable and mark it in your notes.',
-    examples: ['báka (cow) vs baká (maybe)'],
+    examples: ['báka (cow) vs baká (maybe)', 'bása (read) vs basâ (wet) — stress and glottal stop both change'],
     spanish: 'Spanish also uses stress, but Tagalog stress is not always written. Learn the pair, not just the accent mark.',
   },
   {
     title: 'Glottal stop',
     description:
       'A glottal stop is a catch in the throat. Spanish does not use it as a regular contrast, so it needs practice; English has it in “uh-oh”. At the end of a word it can distinguish words even when the stress is the same.',
-    examples: ['basá (read) vs basâ (wet) — same final stress, different ending', 'tubó (sugarcane) vs tubò (growth) — same final stress, different ending'],
-    spanish: 'Practise the catch separately: basá… basâ. Both have final stress; the glottal stop is the difference. Do not replace it with a pause or an extra vowel.',
+    examples: ['tubó (sugarcane) vs tubò (growth) — same final stress, different ending', 'basâ (wet) ends with a catch'],
+    spanish: 'Practise the catch separately: bása… basâ. The stress and the glottal stop both matter; do not replace the catch with a pause or an extra vowel.',
   },
   {
     title: 'The ng sound',

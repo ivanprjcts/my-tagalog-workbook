@@ -9,7 +9,7 @@ to the target sounds.
 
 Pairs:
   báka (cow)      vs baká (maybe)      stress only
-  basá (read)     vs basâ (wet)        final stress; glottal stop only
+  bása (read)     vs basâ (wet)        stress plus glottal stop
   tubò (growth)   vs tubó (sugarcane)  final stress; glottal stop only
 
 The whole word is synthesized with a Spanish voice using the written accent to
@@ -125,7 +125,7 @@ async def main() -> None:
     overrides: dict[str, str] = {}
     overrides["báka"] = await build("baka", "báka", False, "baka-first-stress.mp3")
     overrides["baká"] = await build("baka", "baká", False, "baka-final-stress.mp3")
-    overrides["basá"] = await build("basa-read", "basá", False, "basa-read.mp3")
+    overrides["bása"] = await build("basa-read", "bása", False, "basa-read.mp3")
     overrides["basâ"] = await build("basa-wet", "basá", True, "basa-wet.mp3")
     overrides["tubò"] = await build("tubo-growth", "tubó", True, "tubo-growth.mp3")
     overrides["tubó"] = await build("tubo-sugarcane", "tubó", False, "tubo-sugarcane.mp3")

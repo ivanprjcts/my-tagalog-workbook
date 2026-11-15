@@ -2,7 +2,7 @@
 export const AUDIO_OVERRIDES: Record<string, string> = {
   'báka': '/audio/custom/baka-first-stress.mp3',
   'baká': '/audio/custom/baka-final-stress.mp3',
-  'basá': '/audio/custom/basa-read.mp3',
+  'bása': '/audio/custom/basa-read.mp3',
   'basâ': '/audio/custom/basa-wet.mp3',
   'tubò': '/audio/custom/tubo-growth.mp3',
   'tubó': '/audio/custom/tubo-sugarcane.mp3',

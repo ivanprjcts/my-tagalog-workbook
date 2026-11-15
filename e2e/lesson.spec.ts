@@ -68,7 +68,7 @@ test('stress and glottal minimal pairs use the custom recordings', async ({ page
   const pairs = [
     ['báka', 'baka-first-stress.mp3'],
     ['baká', 'baka-final-stress.mp3'],
-    ['basá', 'basa-read.mp3'],
+    ['bása', 'basa-read.mp3'],
     ['basâ', 'basa-wet.mp3'],
   ] as const;
 

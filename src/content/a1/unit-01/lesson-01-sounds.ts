@@ -93,13 +93,13 @@ export const lesson01SoundsAndSpelling: Lesson = {
     {
       type: 'pattern',
       title: 'Stress and the glottal stop',
-      pattern: 'báka (cow) vs baká (maybe) · basá (read) vs basâ (wet)',
+      pattern: 'báka (cow) vs baká (maybe) · bása (read) vs basâ (wet)',
       explanation:
         'Stress can change the meaning of a word. A final glottal stop can also distinguish words, even when the stress is the same. Written accents are a teaching aid, not normal everyday spelling, so listen for the difference and note it when you learn a new word.',
       examples: [
         { tagalog: 'báka', english: 'cow', explanation: 'Stress on the first syllable.' },
         { tagalog: 'baká', english: 'maybe', explanation: 'Stress on the second syllable.' },
-        { tagalog: 'basá', english: 'read / reading', explanation: 'Stress on the final syllable; no glottal stop.' },
+        { tagalog: 'bása', english: 'read / reading', explanation: 'Stress on the first syllable; no glottal stop.' },
         { tagalog: 'basâ', english: 'wet', explanation: 'Stress on the final syllable, with a glottal catch at the end.' },
         { tagalog: 'tubò', english: 'growth / sprout', explanation: 'Stress on the final syllable, with a glottal catch at the end.' },
         { tagalog: 'tubó', english: 'sugarcane', explanation: 'Stress on the final syllable; no glottal stop.' },
@@ -107,7 +107,7 @@ export const lesson01SoundsAndSpelling: Lesson = {
       commonMistake: {
         wrong: 'Ignore stress and the glottal stop; they are just decoration.',
         right: 'Treat stress and the final glottal stop as part of the word.',
-        explanation: 'Báka and baká differ in stress; basá and basâ differ in the final glottal stop.',
+        explanation: 'Báka and baká differ in stress; bása and basâ differ in both stress and the final glottal stop.',
       },
     },
     {
@@ -149,7 +149,7 @@ export const lesson01SoundsAndSpelling: Lesson = {
       bullets: [
         'Adding a g to ng: say nga, not ga or n-ga.',
         'Sliding the vowels as in English: say ma-ha-l, not may-hal. Spanish vowels are already a better base.',
-        'Forgetting the glottal stop: basâ (wet) is not the same as basá (read).',
+        'Forgetting the glottal stop: basâ (wet) is not the same as bása (read).',
       ],
     },
     {
@@ -202,7 +202,7 @@ export const lesson01SoundsAndSpelling: Lesson = {
         'I can name the five Tagalog vowels.',
         'I can say the ng sound without adding a g.',
         'I can hear the difference between báka and baká.',
-        'I can hear the difference between basá and basâ.',
+        'I can hear the difference between bása and basâ.',
         'I can read bahay, isda and Magandang umaga in syllables.',
       ],
     },
@@ -601,7 +601,8 @@ export const lesson01SoundsAndSpelling: Lesson = {
     'Tagalog.com dictionary — https://www.tagalog.com',
     'Omniglot, Tagalog alphabet — https://omniglot.com/writing/tagalog.htm',
     'Wiktionary, basa — https://en.wiktionary.org/wiki/basa',
-    'Pimsleur Tagalog 1 guide, stress/glottal minimal pairs (PDF) — https://d1enwirvb3djmg.cloudfront.net/Pimsleur-Guides-Booklets/Tagalog1-Bklt-MP3_9781442323445.pdf',
+    'Native-speaker consultation (learner-provided), 15 Nov 2026 — bása (read) has first-syllable stress.',
+    'Pimsleur Tagalog 1 guide lists a final-stress variant basá; the workbook follows the native-speaker form.',
   ],
   status: 'published',
 };
