@@ -129,7 +129,7 @@ export const lesson01SoundsAndSpelling: Lesson = {
         'You also already know ñ from Spanish, and the Tagalog r is a flap like the single r in Spanish pero. Many everyday words are Spanish loans: mesa, kape, oras, numero, silya, bintana, kuwarto.',
       ],
       bullets: [
-        'a like casa, e like mesa, i like sí, o like no (without the glide), u like luna.',
+        'a like casa, e like mesa, i like sí, o like no, u like luna.',
         'Tagalog h is pronounced; Spanish h is silent. It is light, not the raspy Spanish j.',
         'Spanish j loans often became h: Jueves → Huwebes.',
       ],
