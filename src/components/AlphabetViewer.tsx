@@ -174,7 +174,6 @@ export const AlphabetViewer: React.FC<AlphabetViewerProps> = ({ className = '' }
           <li>• The Tagalog r is a flap, like the single r in Spanish pero.</li>
           <li>• Practise the ng sound at the start of a syllable without adding a g.</li>
           <li>• Listen for stress and the glottal stop; they can change the meaning.</li>
-          <li>• If you also speak English, avoid English long-vowel glides.</li>
           <li>• Learn loanword spellings as vocabulary, not as exceptions to a rule.</li>
         </ul>
       </div>

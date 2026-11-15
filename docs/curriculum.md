@@ -4,7 +4,7 @@ This is the authoring contract for **My Tagalog Workbook**. It defines what A1 m
 
 **Audience:** one learner, Spanish L1, English L2, beginner in Tagalog. English is the main explanation language; Spanish is used for contrasts, cognates and false-friend warnings.
 
-**Pronunciation style rule:** anchor pronunciation explanations in Spanish first — the five vowels, the `r` flap, `ñ`, and the `h`/`j` contrast. English comparisons are secondary and should appear only when they add something the Spanish speaker cannot already infer. Do not write objectives such as “pronounce without English long-vowel glides” as the primary frame; say “use the Spanish vowel values as the base” and mention English as a secondary caution.
+**Pronunciation style rule:** anchor pronunciation explanations in Spanish first — the five vowels, the `r` flap, `ñ`, and the `h`/`j` contrast. Do not add English pronunciation cautions; the learner is a Spanish native speaker. English loanword notes are still fine when they explain Tagalog spelling or vocabulary. Say “use the Spanish vowel values as the base”, not “pronounce without English long-vowel glides”.
 
 **Goal:** a functional A1 exit profile, not an official CEFR certificate.
 
