@@ -62,6 +62,7 @@ export type ExerciseTag = z.infer<typeof exerciseTagSchema>;
 export const exampleSchema = z.object({
   tagalog: z.string().min(1),
   english: z.string().min(1),
+  ipa: z.string().optional(),
   explanation: z.string().optional(),
 });
 export type Example = z.infer<typeof exampleSchema>;

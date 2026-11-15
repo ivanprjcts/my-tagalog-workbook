@@ -1,6 +1,7 @@
 'use client';
 
 import type { VocabularyEntry } from '@/content/schema';
+import { PRONUNCIATIONS } from '@/content/pronunciations';
 import { AudioButton } from './AudioButton';
 
 export function VocabularyTable({ entries }: { entries: VocabularyEntry[] }) {
@@ -19,6 +20,9 @@ export function VocabularyTable({ entries }: { entries: VocabularyEntry[] }) {
                 <span className="text-base font-bold text-ink">{entry.tagalog}</span>
                 <AudioButton text={entry.audioText ?? entry.tagalog} compact label="Audio" />
               </div>
+              {PRONUNCIATIONS[entry.tagalog] && (
+                <div className="mt-1 font-mono text-xs text-ink-muted">{PRONUNCIATIONS[entry.tagalog]}</div>
+              )}
               <div className="mt-1 text-xs font-semibold uppercase tracking-wide text-ink-muted">
                 {entry.partOfSpeech}
               </div>

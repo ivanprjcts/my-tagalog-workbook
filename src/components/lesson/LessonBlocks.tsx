@@ -56,6 +56,7 @@ function PatternBlock({ section }: { section: PatternSection }) {
                     <span className="font-semibold text-ink">{example.tagalog}</span>
                     <AudioButton text={example.tagalog} compact label="Audio" />
                   </div>
+                  {example.ipa && <div className="mt-1 font-mono text-xs text-ink-muted">{example.ipa}</div>}
                   {example.explanation && <p className="mt-1 text-xs text-ink-muted">{example.explanation}</p>}
                 </td>
                 <td className="px-4 py-3 text-ink-muted">{example.english}</td>

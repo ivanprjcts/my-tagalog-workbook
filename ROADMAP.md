@@ -16,14 +16,15 @@ The work is tracked in the GitHub epic [#1](https://github.com/ivanprjcts/my-tag
 - **Exercise engine and UI.** Multiple choice, multi-select, matching, fill-in-the-blank, word bank, listening, dictation, categorization, ordering, translation, error correction and conjugation.
 - **Progress store v2.** Versioned localStorage, migration from the old prototype key, lesson completion, best scores, time tracking, streak, export/import and reset.
 - **Spaced review.** Four-grade SM-2 variant, new/due queue, session summary, persistence and tests.
-- **Reference page.** Corrected alphabet and pronunciation reference plus the A1 grammar rules.
+- **Reference page.** Corrected alphabet and pronunciation reference, A1 grammar rules and a guide to reading the IPA.
+- **Vocabulary IPA.** Phonemic transcription for every vocabulary item, with stress, glottal stops and the `ng` sound marked.
 - **Pre-generated audio.** 429 Tagalog recordings generated for vocabulary, dialogues, examples, listening and dictation, with a browser-voice fallback. See `docs/audio.md`.
 - **Quality gates.** Vitest, React Testing Library, Playwright, `content:check`, lint, typecheck, build and GitHub Actions.
 - **Current content totals:** 2 units, 12 published lessons, 120 exercises, 72 check questions, 219 vocabulary items.
 
 ### Verified locally
 
-- `npm run check` passes: lint, typecheck, 57 unit/component tests and content validation.
+- `npm run check` passes: lint, typecheck, 58 unit/component tests and content validation.
 - `npm run test:e2e` passes: lesson practice, lesson check, persistence after reload, review scheduling, both unit quizzes and 390px overflow.
 - `npm run build` generates 28 static pages, including all twelve lessons and both unit quizzes.
 - A Playwright pass through the full Unit 1 lesson check records completion and survives reload.

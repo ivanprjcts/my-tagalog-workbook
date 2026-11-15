@@ -6,6 +6,7 @@ A static, mobile-first interactive workbook for a Spanish speaker learning Tagal
 - **Roadmap and analysis:** [ROADMAP.md](ROADMAP.md)
 - **A1 curriculum:** [docs/curriculum.md](docs/curriculum.md)
 - **Content sources and review policy:** [docs/content-sources.md](docs/content-sources.md)
+- **Pronunciation and IPA:** [docs/pronunciation.md](docs/pronunciation.md)
 - **Work tracker:** [Epic #1](https://github.com/ivanprjcts/my-tagalog-workbook/issues/1)
 
 ## What is implemented
@@ -21,6 +22,7 @@ A static, mobile-first interactive workbook for a Spanish speaker learning Tagal
 - Spaced review with a four-grade SM-2 variant.
 - Progress export/import and reset.
 - Alphabet and pronunciation reference with a corrected 28-letter / abakada explanation.
+- Phonemic IPA for every vocabulary item, plus IPA on minimal-pair examples and review cards. See [docs/pronunciation.md](docs/pronunciation.md).
 - A1 grammar reference.
 - Vitest + React Testing Library suite and CI.
 - App shell with responsive navigation, accessible focus states, print styles and Spanish-speaker callouts.

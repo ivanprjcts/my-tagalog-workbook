@@ -97,12 +97,12 @@ export const lesson01SoundsAndSpelling: Lesson = {
       explanation:
         'Stress can change the meaning of a word. A final glottal stop can also distinguish words, even when the stress is the same. Written accents are a teaching aid, not normal everyday spelling, so listen for the difference and note it when you learn a new word.',
       examples: [
-        { tagalog: 'báka', english: 'cow', explanation: 'Stress on the first syllable.' },
-        { tagalog: 'baká', english: 'maybe', explanation: 'Stress on the second syllable.' },
-        { tagalog: 'bása', english: 'read / reading', explanation: 'Stress on the first syllable; no glottal stop.' },
-        { tagalog: 'basâ', english: 'wet', explanation: 'Stress on the final syllable, with a glottal catch at the end.' },
-        { tagalog: 'tubò', english: 'growth / sprout', explanation: 'Stress on the final syllable, with a glottal catch at the end.' },
-        { tagalog: 'tubó', english: 'sugarcane', explanation: 'Stress on the final syllable; no glottal stop.' },
+        { tagalog: 'báka', english: 'cow', ipa: '/ˈbaka/', explanation: 'Stress on the first syllable.' },
+        { tagalog: 'baká', english: 'maybe', ipa: '/baˈka/', explanation: 'Stress on the second syllable.' },
+        { tagalog: 'bása', english: 'read / reading', ipa: '/ˈbasa/', explanation: 'Stress on the first syllable; no glottal stop.' },
+        { tagalog: 'basâ', english: 'wet', ipa: '/baˈsaʔ/', explanation: 'Stress on the final syllable, with a glottal catch at the end.' },
+        { tagalog: 'tubò', english: 'growth / sprout', ipa: '/tuˈboʔ/', explanation: 'Stress on the final syllable, with a glottal catch at the end.' },
+        { tagalog: 'tubó', english: 'sugarcane', ipa: '/tuˈbo/', explanation: 'Stress on the final syllable; no glottal stop.' },
       ],
       commonMistake: {
         wrong: 'Ignore stress and the glottal stop; they are just decoration.',

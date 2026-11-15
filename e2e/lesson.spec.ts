@@ -5,6 +5,8 @@ const LESSON = '/units/unit-1/lessons/sounds-and-spelling';
 test('lesson renders and the first practice question gives feedback', async ({ page }) => {
   await page.goto(LESSON);
   await expect(page.getByRole('heading', { name: 'Sounds and spelling', level: 1 })).toBeVisible();
+  await expect(page.getByText('/ˈbasa/').first()).toBeVisible();
+  await expect(page.getByText('/ˈbahaj/').first()).toBeVisible();
 
   const practice = page.locator('#practice');
   await expect(practice).toBeVisible();

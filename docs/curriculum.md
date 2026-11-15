@@ -138,6 +138,7 @@ Every lesson uses the same sections. The content file contains data; the rendere
 
 4. **Vocabulary** (12–20 items)
    - Tagalog, English, part of speech.
+   - Phonemic IPA, with stress and glottal stops marked.
    - Example sentence and English translation.
    - Audio key.
    - Optional Spanish cognate or false-friend note.

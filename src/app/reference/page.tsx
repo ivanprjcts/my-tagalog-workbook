@@ -34,6 +34,15 @@ export default function ReferencePage() {
           </Card>
         </section>
 
+        <Callout variant="tip" title="How to read the IPA" className="mt-8">
+          <p>
+            Vocabulary entries show a phonemic transcription such as <strong>/ˈbahaj/</strong>. The mark <strong>ˈ</strong>{' '}
+            means the next syllable is stressed; <strong>ʔ</strong> is a glottal stop; <strong>ŋ</strong> is the <em>ng</em>{' '}
+            sound; <strong>ɾ</strong> is the Tagalog <em>r</em> flap. The transcription is a learning aid, so listen to the
+            recording as well.
+          </p>
+        </Callout>
+
         <section id="grammar" className="scroll-mt-24">
           <h2 className="mb-4 text-2xl font-black text-ink">A1 grammar</h2>
           <p className="mb-5 text-sm text-ink-muted">
