@@ -239,7 +239,7 @@ export const PHONEMES: Phoneme[] = [
       { word: 'ngiti', english: 'smile', emphasis: 'ngi-ti' },
     ],
     notes:
-      'A single letter and a single sound, /ŋ/. Spanish has this sound before g in tengo; English sing has it at the end. At the start of a syllable there is no hard g. The common word mga is pronounced ma-nga, not ma-ga.',
+      'A single letter and a single sound, /ŋ/. Spanish has this sound before g in tengo. At the start of a syllable there is no hard g. The common word mga is pronounced ma-nga, not ma-ga.',
   },
   {
     letter: 'O',
@@ -441,7 +441,7 @@ export const PRONUNCIATION_RULES: PronunciationRule[] = [
   {
     title: 'The ng sound',
     description:
-      'Ng is one letter and one sound, /ŋ/. Spanish has it before g in tengo; English sing has it at the end. At the beginning of a word there is no hard g. The word mga is pronounced ma-nga, not ma-ga.',
+      'Ng is one letter and one sound, /ŋ/. Spanish has it before g in tengo. At the beginning of a word there is no hard g. The word mga is pronounced ma-nga, not ma-ga.',
     examples: ['ngayon (now)', 'ngiti (smile)', 'mga (plural marker)'],
     spanish: 'Spanish has this sound before g (tengo), but not at the start of a syllable. Practise “nga” without a g.',
   },
