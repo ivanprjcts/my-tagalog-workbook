@@ -7,9 +7,9 @@ test('lesson renders and the first practice question gives feedback', async ({ p
   await expect(page.getByRole('heading', { name: 'Sounds and spelling', level: 1 })).toBeVisible();
   await expect(page.getByText('/ˈbasa/').first()).toBeVisible();
   await expect(page.getByText('/ˈbahaj/').first()).toBeVisible();
-  await expect(page.getByText('/ʔaˈma/').first()).toBeVisible();
-  await expect(page.getByText('/ˈʔoɾas/').first()).toBeVisible();
-  await expect(page.getByText('/ˈʔulo/').first()).toBeVisible();
+  await expect(page.getByText('/aˈma/').first()).toBeVisible();
+  await expect(page.getByText('/ˈoɾas/').first()).toBeVisible();
+  await expect(page.getByText('/ˈulo/').first()).toBeVisible();
 
   const practice = page.locator('#practice');
   await expect(practice).toBeVisible();

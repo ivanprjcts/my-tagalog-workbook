@@ -9,19 +9,23 @@ Every vocabulary entry shows a phonemic IPA transcription under the Tagalog word
 | `/.../` | Phonemic transcription, not a narrow phonetic one |
 | `ˈ` | Primary stress on the following syllable |
 | `ˌ` | Secondary stress |
-| `ʔ` | Glottal stop |
+| `ʔ` | Meaningful glottal stop (medial or final; word-initial glottal stops are omitted) |
 | `ŋ` | The `ng` sound |
 | `ɾ` | The Tagalog `r` flap |
 | `j` | The `y` sound |
 | `ɡ` | Hard `g` |
 | `a e i o u` | The five Tagalog vowels |
 
+Word-initial glottal stops are not shown. They are predictable in Tagalog and would add visual noise without changing which word is meant. A glottal stop is written only when it is meaningful inside or at the end of a word.
+
 Examples:
 
+- `ama` — `/aˈma/` (not `/ʔaˈma/`)
 - `bahay` — `/ˈbahaj/`
 - `mga` — `/maˈŋa/`
 - `bása` — `/ˈbasa/` (read; first-syllable stress)
 - `basâ` — `/baˈsaʔ/` (wet; final stress + glottal stop)
+- `oo` — `/ˈoʔo/` (the medial glottal stop is kept; the initial one is omitted)
 - `tubò` — `/tuˈboʔ/` (growth; final stress + glottal stop)
 - `tubó` — `/tuˈbo/` (sugarcane; final stress, no glottal)
 

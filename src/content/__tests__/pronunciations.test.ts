@@ -28,6 +28,13 @@ describe('vocabulary IPA', () => {
     expect(malformed).toEqual([]);
   });
 
+  it('omits predictable word-initial glottal stops', () => {
+    const noisy = Object.entries(PRONUNCIATIONS).filter(([, ipa]) =>
+      /^\/(?:[ˈˌ])?ʔ| (?:[ˈˌ])?ʔ/.test(ipa),
+    );
+    expect(noisy).toEqual([]);
+  });
+
   it('has IPA for every alphabet example word', () => {
     const missing: string[] = [];
     for (const phoneme of PHONEMES) {
