@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { PHONEMES, PRONUNCIATION_RULES } from '@/data/phonemes';
 import type { LetterUsage } from '@/types/content';
 import { PRONUNCIATIONS } from '@/content/pronunciations';
+import { InlineText } from '@/components/ui/InlineText';
 
 export interface AlphabetViewerProps {
   className?: string;
@@ -148,11 +149,13 @@ export const AlphabetViewer: React.FC<AlphabetViewerProps> = ({ className = '' }
           {PRONUNCIATION_RULES.map((rule) => (
             <div key={rule.title} className="rounded-lg border border-stone-200 bg-stone-50 p-4">
               <h4 className="mb-2 font-semibold text-stone-900">{rule.title}</h4>
-              <p className="mb-3 text-sm text-stone-700">{rule.description}</p>
+              <p className="mb-3 text-sm text-stone-700">
+                <InlineText text={rule.description} />
+              </p>
               <div className="space-y-1">
                 {rule.examples.map((example, exIdx) => (
                   <div key={exIdx} className="text-sm text-emerald-700">
-                    • {example}
+                    • <InlineText text={example} />
                   </div>
                 ))}
               </div>

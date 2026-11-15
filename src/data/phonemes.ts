@@ -420,7 +420,7 @@ export const PRONUNCIATION_RULES: PronunciationRule[] = [
   {
     title: 'Five vowels, close to Spanish',
     description:
-      'Tagalog has a, e, i, o and u. Start from the Spanish values: they are short and clear. The letters e and o have open variants in some words, but the spelling does not change.',
+      'Tagalog has ==a==, ==e==, ==i==, ==o== and ==u==. Start from the Spanish values: they are short and clear. The letters e and o have open variants in some words, but the spelling does not change.',
     examples: ['ama (father)', 'mesa (table)', 'isda (fish)', 'oras (time)', 'ulo (head)'],
     spanish: 'You already have the five vowels. Keep them short and clean; do not turn them into a glide.',
   },

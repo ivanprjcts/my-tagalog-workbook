@@ -44,9 +44,9 @@ export const lesson01SoundsAndSpelling: Lesson = {
     {
       type: 'pattern',
       title: 'Five vowels: a, e, i, o, u',
-      pattern: 'a · e · i · o · u',
+      pattern: 'a /a/ · e /e/ · i /i/ · o /o/ · u /u/',
       explanation:
-        'Keep the vowels short and clean. Start from the Spanish values: a as in casa, e as in mesa, i as in sí, o as in no, u as in luna.',
+        'Keep the vowels short and clean. Start from the Spanish values: ==a== as in casa, ==e== as in mesa, ==i== as in sí, ==o== as in no, ==u== as in luna.',
       examples: [
         { tagalog: 'ama', english: 'father', explanation: 'Two clean a sounds, stress on the second: a-MA.' },
         { tagalog: 'mesa', english: 'table', explanation: 'A Spanish loan, stress on the first: ME-sa.' },

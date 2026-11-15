@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import type { DialogueSection, LessonSection, PatternSection, TextSection } from '@/content/schema';
 import { Callout } from '@/components/ui/Callout';
+import { InlineText } from '@/components/ui/InlineText';
 import { PRONUNCIATIONS } from '@/content/pronunciations';
 import { cn } from '@/components/ui/cn';
 import { AudioButton } from './AudioButton';
@@ -17,12 +18,16 @@ function TextBlock({ section }: { section: TextSection }) {
       {section.title && <SectionTitle>{section.title}</SectionTitle>}
       <div className="prose-lesson text-ink">
         {section.paragraphs.map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
+          <p key={index}>
+            <InlineText text={paragraph} />
+          </p>
         ))}
         {section.bullets && (
           <ul>
             {section.bullets.map((bullet, index) => (
-              <li key={index}>{bullet}</li>
+              <li key={index}>
+                <InlineText text={bullet} />
+              </li>
             ))}
           </ul>
         )}
@@ -40,7 +45,9 @@ function PatternBlock({ section }: { section: PatternSection }) {
           {section.pattern}
         </div>
       )}
-      <p className="mb-4 leading-relaxed text-ink">{section.explanation}</p>
+      <p className="mb-4 leading-relaxed text-ink">
+        <InlineText text={section.explanation} />
+      </p>
       <div className="overflow-x-auto rounded-xl border border-line">
         <table className="w-full min-w-[32rem] text-left text-sm">
           <thead className="bg-paper-strong text-xs font-bold uppercase tracking-widest text-ink-muted">
@@ -73,12 +80,16 @@ function PatternBlock({ section }: { section: PatternSection }) {
       {section.commonMistake && (
         <Callout variant="mistake" className="mt-4">
           <p>
-            <span className="font-semibold">Instead of:</span> {section.commonMistake.wrong}
+            <span className="font-semibold">Instead of:</span>{' '}
+            <InlineText text={section.commonMistake.wrong} />
           </p>
           <p className="mt-1">
-            <span className="font-semibold">Say:</span> {section.commonMistake.right}
+            <span className="font-semibold">Say:</span>{' '}
+            <InlineText text={section.commonMistake.right} />
           </p>
-          <p className="mt-2 text-ink-muted">{section.commonMistake.explanation}</p>
+          <p className="mt-2 text-ink-muted">
+            <InlineText text={section.commonMistake.explanation} />
+          </p>
         </Callout>
       )}
     </section>
@@ -143,7 +154,7 @@ function ReviewBlock({ section }: { section: Extract<LessonSection, { type: 'rev
         {section.items.map((item) => (
           <li key={item} className="flex gap-2 text-sm text-ink">
             <span aria-hidden="true" className="text-accent-strong">✓</span>
-            <span>{item}</span>
+            <span><InlineText text={item} /></span>
           </li>
         ))}
       </ul>
@@ -169,12 +180,16 @@ export function LessonSectionView({
       return (
         <Callout variant={section.variant} title={section.title}>
           {section.paragraphs.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <p key={index}>
+              <InlineText text={paragraph} />
+            </p>
           ))}
           {section.bullets && (
             <ul>
               {section.bullets.map((bullet, index) => (
-                <li key={index}>{bullet}</li>
+                <li key={index}>
+                  <InlineText text={bullet} />
+                </li>
               ))}
             </ul>
           )}

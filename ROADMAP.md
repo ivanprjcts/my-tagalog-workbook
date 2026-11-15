@@ -24,7 +24,7 @@ The work is tracked in the GitHub epic [#1](https://github.com/ivanprjcts/my-tag
 
 ### Verified locally
 
-- `npm run check` passes: lint, typecheck, 60 unit/component tests and content validation.
+- `npm run check` passes: lint, typecheck, 61 unit/component tests and content validation.
 - `npm run test:e2e` passes: lesson practice, lesson check, persistence after reload, review scheduling, both unit quizzes and 390px overflow.
 - `npm run build` generates 28 static pages, including all twelve lessons and both unit quizzes.
 - A Playwright pass through the full Unit 1 lesson check records completion and survives reload.
