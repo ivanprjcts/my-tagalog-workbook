@@ -124,7 +124,7 @@ export const PHONEMES: Phoneme[] = [
       { word: 'hapon', english: 'afternoon / Japanese', emphasis: 'ha-pon' },
     ],
     notes:
-      'A light /h/, not the raspy Spanish j. English hello is a close comparison. Many Spanish j loans became Tagalog h (Jueves → Huwebes).',
+      'A light /h/, not the raspy Spanish j. Spanish h is silent, but Tagalog h is pronounced. English hello is a close comparison. Many Spanish j loans became Tagalog h (Jueves → Huwebes).',
   },
   {
     letter: 'I',
@@ -462,7 +462,7 @@ export const PRONUNCIATION_RULES: PronunciationRule[] = [
   {
     title: 'H is not Spanish J',
     description:
-      'Tagalog h is a light /h/ (English hello is close). Spanish j is a stronger, raspier sound. Many Spanish j loans became h in Tagalog.',
+      'Tagalog h is a light /h/ (English hello is close). Spanish h is silent, so remember to pronounce it. Spanish j is a stronger, raspier sound. Many Spanish j loans became h in Tagalog.',
     examples: ['hapon (afternoon)', 'halaman (plant)', 'Jueves → Huwebes'],
     spanish: 'Do not pronounce Tagalog h with the back-of-the-throat Spanish j.',
   },

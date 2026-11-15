@@ -54,11 +54,6 @@ export const lesson01SoundsAndSpelling: Lesson = {
         { tagalog: 'oras', english: 'time / hour', explanation: 'A Spanish loan, stress on the first: O-ras.' },
         { tagalog: 'ulo', english: 'head', explanation: 'Short u and o, stress on the first: U-lo.' },
       ],
-      commonMistake: {
-        wrong: 'Stretch the vowels into a glide.',
-        right: 'Keep the Spanish a in casa and the Spanish o in no short and clean.',
-        explanation: 'Tagalog vowels are short and clean. Spanish already gives you the right base.',
-      },
     },
     {
       type: 'text',
@@ -135,7 +130,7 @@ export const lesson01SoundsAndSpelling: Lesson = {
       ],
       bullets: [
         'a like casa, e like mesa, i like sí, o like no (without the glide), u like luna.',
-        'Tagalog h is light, not the raspy Spanish j.',
+        'Tagalog h is pronounced; Spanish h is silent. It is light, not the raspy Spanish j.',
         'Spanish j loans often became h: Jueves → Huwebes.',
       ],
     },
@@ -148,7 +143,7 @@ export const lesson01SoundsAndSpelling: Lesson = {
       ],
       bullets: [
         'Adding a g to ng: say nga, not ga or n-ga.',
-        'Sliding the vowels into a glide: keep each vowel short and clean, as in ma-ha-l.',
+        'Treating h as silent, as in Spanish: Tagalog h is pronounced.',
         'Forgetting the glottal stop: basâ (wet) is not the same as bása (read).',
       ],
     },
