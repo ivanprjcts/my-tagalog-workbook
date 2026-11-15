@@ -1,6 +1,6 @@
 # Pronunciation and IPA
 
-Every vocabulary entry shows a phonemic IPA transcription under the Tagalog word. The same transcription appears on review cards and on the minimal-pair examples.
+Every vocabulary entry shows a phonemic IPA transcription under the Tagalog word. The same transcription appears on review cards, on the minimal-pair examples and on the alphabet example cards (for example `ama`, `mesa`, `isda`, `oras` and `ulo`).
 
 ## Conventions
 

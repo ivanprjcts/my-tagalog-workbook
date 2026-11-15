@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { PHONEMES, PRONUNCIATION_RULES } from '@/data/phonemes';
 import type { LetterUsage } from '@/types/content';
+import { PRONUNCIATIONS } from '@/content/pronunciations';
 
 export interface AlphabetViewerProps {
   className?: string;
@@ -123,6 +124,9 @@ export const AlphabetViewer: React.FC<AlphabetViewerProps> = ({ className = '' }
               {selectedPhoneme.examples.map((example, idx) => (
                 <div key={idx} className="rounded-lg border border-stone-200 bg-white p-3">
                   <div className="font-semibold text-stone-900">{example.word}</div>
+                  {PRONUNCIATIONS[example.word] && (
+                    <div className="font-mono text-xs text-stone-600">{PRONUNCIATIONS[example.word]}</div>
+                  )}
                   <div className="text-sm text-emerald-700">{example.english}</div>
                   {example.emphasis && (
                     <div className="mt-1 text-xs text-stone-600">Syllables: {example.emphasis}</div>

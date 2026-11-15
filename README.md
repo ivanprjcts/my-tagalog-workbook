@@ -22,7 +22,7 @@ A static, mobile-first interactive workbook for a Spanish speaker learning Tagal
 - Spaced review with a four-grade SM-2 variant.
 - Progress export/import and reset.
 - Alphabet and pronunciation reference with a corrected 28-letter / abakada explanation.
-- Phonemic IPA for every vocabulary item, plus IPA on minimal-pair examples and review cards. See [docs/pronunciation.md](docs/pronunciation.md).
+- Phonemic IPA for every vocabulary item and alphabet example, plus IPA on minimal-pair examples and review cards. See [docs/pronunciation.md](docs/pronunciation.md).
 - A1 grammar reference.
 - Vitest + React Testing Library suite and CI.
 - App shell with responsive navigation, accessible focus states, print styles and Spanish-speaker callouts.
