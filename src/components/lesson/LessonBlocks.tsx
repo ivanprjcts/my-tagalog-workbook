@@ -4,6 +4,7 @@ import { useState } from 'react';
 import type { DialogueSection, LessonSection, PatternSection, TextSection } from '@/content/schema';
 import { Callout } from '@/components/ui/Callout';
 import { PRONUNCIATIONS } from '@/content/pronunciations';
+import { getStressLabel } from '@/lib/ipa';
 import { cn } from '@/components/ui/cn';
 import { AudioButton } from './AudioButton';
 
@@ -58,8 +59,11 @@ function PatternBlock({ section }: { section: PatternSection }) {
                     <AudioButton text={example.tagalog} compact label="Audio" />
                   </div>
                   {(example.ipa ?? PRONUNCIATIONS[example.tagalog]) && (
-                    <div className="mt-1 font-mono text-xs text-ink-muted">
-                      {example.ipa ?? PRONUNCIATIONS[example.tagalog]}
+                    <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs text-ink-muted">
+                      <span className="font-mono">{example.ipa ?? PRONUNCIATIONS[example.tagalog]}</span>
+                      {getStressLabel(example.ipa ?? PRONUNCIATIONS[example.tagalog]) && (
+                        <span className="font-semibold">Stress: {getStressLabel(example.ipa ?? PRONUNCIATIONS[example.tagalog])}</span>
+                      )}
                     </div>
                   )}
                   {example.explanation && <p className="mt-1 text-xs text-ink-muted">{example.explanation}</p>}

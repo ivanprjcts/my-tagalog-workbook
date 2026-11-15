@@ -48,11 +48,11 @@ export const lesson01SoundsAndSpelling: Lesson = {
       explanation:
         'Keep the vowels short and clean. Start from the Spanish values: a as in casa, e as in mesa, i as in sí, o as in no (without the glide), u as in luna. If you also speak English, do not import the glide from “day” or “go”.',
       examples: [
-        { tagalog: 'ama', english: 'father', explanation: 'Two clean a sounds: a-ma.' },
-        { tagalog: 'mesa', english: 'table', explanation: 'A Spanish loan, pronounced me-sa.' },
-        { tagalog: 'isda', english: 'fish', explanation: 'Short i, then a clear a: is-da.' },
-        { tagalog: 'oras', english: 'time / hour', explanation: 'A Spanish loan, pronounced o-ras.' },
-        { tagalog: 'ulo', english: 'head', explanation: 'Short u and o: u-lo.' },
+        { tagalog: 'ama', english: 'father', explanation: 'Two clean a sounds, stress on the second: a-MA.' },
+        { tagalog: 'mesa', english: 'table', explanation: 'A Spanish loan, stress on the first: ME-sa.' },
+        { tagalog: 'isda', english: 'fish', explanation: 'Short i, then a clear a, stress on the second: is-DA.' },
+        { tagalog: 'oras', english: 'time / hour', explanation: 'A Spanish loan, stress on the first: O-ras.' },
+        { tagalog: 'ulo', english: 'head', explanation: 'Short u and o, stress on the first: U-lo.' },
       ],
       commonMistake: {
         wrong: 'Switch to the English a in cat and the English o in go.',
@@ -80,9 +80,9 @@ export const lesson01SoundsAndSpelling: Lesson = {
       explanation:
         'Ng is one letter and one sound, /ŋ/. Spanish has it before g in tengo; English sing has it at the end. At the beginning of a syllable there is no hard g. The very common word mga is pronounced ma-nga.',
       examples: [
-        { tagalog: 'ngayon', english: 'now / today', explanation: 'Starts with the ng sound: nga-yon.' },
-        { tagalog: 'ngiti', english: 'smile', explanation: 'ngi-ti, again with no hard g.' },
-        { tagalog: 'mga', english: 'plural marker', explanation: 'Pronounced ma-nga, not ma-ga.' },
+        { tagalog: 'ngayon', english: 'now / today', explanation: 'Starts with the ng sound, stress on the second: nga-YON.' },
+        { tagalog: 'ngiti', english: 'smile', explanation: 'No hard g, stress on the second: ngi-TI.' },
+        { tagalog: 'mga', english: 'plural marker', explanation: 'Pronounced ma-NGA, not ma-ga.' },
       ],
       commonMistake: {
         wrong: 'Say mga as ma-ga, or add a g to ngayon.',

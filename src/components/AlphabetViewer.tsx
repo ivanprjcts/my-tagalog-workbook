@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { PHONEMES, PRONUNCIATION_RULES } from '@/data/phonemes';
 import type { LetterUsage } from '@/types/content';
 import { PRONUNCIATIONS } from '@/content/pronunciations';
+import { getStressLabel } from '@/lib/ipa';
 
 export interface AlphabetViewerProps {
   className?: string;
@@ -130,6 +131,11 @@ export const AlphabetViewer: React.FC<AlphabetViewerProps> = ({ className = '' }
                   <div className="text-sm text-emerald-700">{example.english}</div>
                   {example.emphasis && (
                     <div className="mt-1 text-xs text-stone-600">Syllables: {example.emphasis}</div>
+                  )}
+                  {getStressLabel(PRONUNCIATIONS[example.word]) && (
+                    <div className="mt-0.5 text-xs font-semibold text-stone-600">
+                      Stress: {getStressLabel(PRONUNCIATIONS[example.word])}
+                    </div>
                   )}
                   {example.spanish && (
                     <div className="mt-1 text-xs text-amber-700">Spanish: {example.spanish}</div>

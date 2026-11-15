@@ -10,6 +10,8 @@ test('lesson renders and the first practice question gives feedback', async ({ p
   await expect(page.getByText('/aˈma/').first()).toBeVisible();
   await expect(page.getByText('/ˈoɾas/').first()).toBeVisible();
   await expect(page.getByText('/ˈulo/').first()).toBeVisible();
+  await expect(page.getByText('Stress: 2nd syllable').first()).toBeVisible();
+  await expect(page.getByText('Stress: 1st syllable').first()).toBeVisible();
 
   const practice = page.locator('#practice');
   await expect(practice).toBeVisible();

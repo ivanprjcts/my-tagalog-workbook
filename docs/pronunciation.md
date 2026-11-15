@@ -18,6 +18,8 @@ Every vocabulary entry shows a phonemic IPA transcription under the Tagalog word
 
 Word-initial glottal stops are not shown. They are predictable in Tagalog and would add visual noise without changing which word is meant. A glottal stop is written only when it is meaningful inside or at the end of a word.
 
+Each example also shows a plain-language stress label such as “Stress: 2nd syllable”. In the short descriptions, the stressed syllable is written in capitals: `a-MA`, `ME-sa`, `is-DA`.
+
 Examples:
 
 - `ama` — `/aˈma/` (not `/ʔaˈma/`)
