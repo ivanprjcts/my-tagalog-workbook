@@ -14,7 +14,8 @@ test('lesson renders and the first practice question gives feedback', async ({ p
 
   const practice = page.locator('#practice');
   await expect(practice).toBeVisible();
-  await practice.getByLabel('A', { exact: true }).check();
+  await expect(practice.getByText('Which pair is distinguished by stress alone?')).toBeVisible();
+  await practice.getByLabel('báka / baká', { exact: true }).check();
   await practice.getByRole('button', { name: 'Check answer' }).click();
   await expect(practice.getByText('Correct', { exact: true })).toBeVisible();
   await practice.getByRole('button', { name: 'Next question' }).click();
